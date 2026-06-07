@@ -8,6 +8,10 @@ Footprint không chỉ là danh sách công việc.
 
 Footprint cũng cần nói rõ bạn học được gì trong quá trình làm phần việc của mình.
 
+Trong buổi thi cuối kỳ, mỗi thành viên cần có thể giải thích phần việc của mình.
+
+Nhóm cần nộp bản cứng của individual footprint.
+
 Mỗi thành viên cần có một mục riêng theo mẫu dưới đây.
 
 ## Thành viên 1: Họ tên và mã sinh viên
