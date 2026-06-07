@@ -1,10 +1,12 @@
-# Hướng dẫn nộp bài cuối kỳ NHA408E khóa 62
+# Hướng dẫn nộp bài cuối kỳ môn NHA408E khóa 62
 
 Tài liệu này hướng dẫn các nhóm nộp bài cuối kỳ môn NHA408E khóa 62 qua GitHub organization `FTU-Legacy-62`.
 
 ## Mục đích của organization và hub
 
-Organization `FTU-Legacy-62` là không gian chung để lưu các repo sản phẩm cuối kỳ của cả lớp. Hub `FTU-Legacy-62/hub` là nơi tập trung đường dẫn, hướng dẫn, mẫu tài liệu và trạng thái nộp bài của 10 nhóm.
+Organization `FTU-Legacy-62` là không gian chung để lưu repo sản phẩm cuối kỳ của cả lớp.
+
+Repo `FTU-Legacy-62/hub` là nơi tập trung đường dẫn, hướng dẫn, mẫu tài liệu và trạng thái nộp bài của 10 nhóm.
 
 Hub giúp giảng viên và sinh viên:
 
@@ -15,7 +17,7 @@ Hub giúp giảng viên và sinh viên:
 
 ## Repo nhóm dùng để làm gì
 
-Mỗi nhóm có một repo riêng:
+Mỗi nhóm có một repo riêng trong organization:
 
 - G01: https://github.com/FTU-Legacy-62/G01
 - G02: https://github.com/FTU-Legacy-62/G02
@@ -28,11 +30,15 @@ Mỗi nhóm có một repo riêng:
 - G09: https://github.com/FTU-Legacy-62/G09
 - G10: https://github.com/FTU-Legacy-62/G10
 
-Repo nhóm là nơi lưu sản phẩm cuối kỳ và tài liệu đi kèm. Nhóm cần đưa vào repo những gì cần thiết để người khác có thể mở, xem, hiểu và demo sản phẩm.
+Repo nhóm là nơi lưu sản phẩm cuối kỳ và tài liệu đi kèm.
+
+Nhóm cần đưa vào repo những gì cần thiết để người khác có thể mở, xem, hiểu và demo sản phẩm.
 
 ## Sản phẩm cuối kỳ cần có gì
 
-Mỗi nhóm phải nộp sản phẩm thật, không chỉ nộp slide thuyết trình. Sản phẩm có thể là ứng dụng, website, dashboard, mô hình thử nghiệm, quy trình phân tích dữ liệu, prototype tương tác hoặc một sản phẩm số khác phù hợp với đề tài.
+Mỗi nhóm phải nộp sản phẩm thật, không chỉ nộp slide thuyết trình.
+
+Sản phẩm có thể là ứng dụng, website, dashboard, mô hình thử nghiệm, quy trình phân tích dữ liệu, prototype tương tác hoặc một sản phẩm số khác phù hợp với đề tài.
 
 Sản phẩm cần thể hiện rõ:
 
@@ -46,11 +52,13 @@ Sản phẩm cần thể hiện rõ:
 - Cách mở, chạy hoặc demo.
 - Đóng góp của từng thành viên.
 
-Sản phẩm không cần hoàn hảo, nhưng phải mở được, xem được, giải thích được và có thể demo được.
+Sản phẩm không cần hoàn hảo, nhưng phải mở được, xem được, giải thích được và demo được.
 
 ## Yêu cầu public repo
 
-Tất cả repo nhóm phải ở chế độ public để giảng viên, các nhóm khác và sinh viên khóa sau có thể xem được. Trước khi nộp, nhóm cần kiểm tra lại repo của mình không chứa thông tin nhạy cảm.
+Tất cả repo nhóm phải ở chế độ public để giảng viên, các nhóm khác và sinh viên khóa sau có thể xem được.
+
+Trước khi nộp, nhóm cần kiểm tra lại repo của mình không chứa thông tin nhạy cảm.
 
 Sau hạn nộp bài, giảng viên có thể thay đổi quyền chỉnh sửa để lưu lại bản nộp chính thức.
 
@@ -77,7 +85,9 @@ Nếu dữ liệu lấy từ nguồn khác, nhóm cần ghi rõ nguồn và các
 
 ## Yêu cầu footprint
 
-Footprint là dấu vết học tập và đóng góp mà nhóm để lại cho người đọc sau này. Footprint không chỉ là danh sách công việc.
+Footprint là dấu vết học tập và đóng góp mà nhóm để lại cho người đọc sau này.
+
+Footprint không chỉ là danh sách công việc.
 
 Repo nhóm cần có:
 
