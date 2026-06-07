@@ -1,12 +1,12 @@
 # Individual Footprint
 
-Individual footprint là dấu vết cá nhân của từng thành viên.
+Individual footprint là phần ghi lại đóng góp của từng thành viên.
 
-Tài liệu này cần thân thiện, có màu sắc cá nhân, nhưng vẫn phải cụ thể và kiểm chứng được.
+Mỗi thành viên cần viết rõ mình đã làm gì, phần đó liên quan thế nào đến sản phẩm cuối cùng và có bằng chứng gì để kiểm tra.
 
 Footprint không chỉ là danh sách công việc.
 
-Footprint là dấu vết học tập và đóng góp mà sinh viên để lại cho người đọc sau này. Người đọc cần hiểu bạn đã thật sự làm gì, phần đó kết nối thế nào với sản phẩm cuối cùng, bạn học được gì và người khác có thể kiểm chứng đóng góp của bạn bằng cách nào.
+Footprint cũng cần nói rõ bạn học được gì trong quá trình làm phần việc của mình.
 
 Mỗi thành viên cần có một mục riêng theo mẫu dưới đây.
 
@@ -14,15 +14,15 @@ Mỗi thành viên cần có một mục riêng theo mẫu dưới đây.
 
 ### Vai trò trong dự án
 
-Ghi vai trò chính của bạn trong dự án.
+Bạn phụ trách vai trò gì trong dự án?
 
 Ví dụ: phân tích vấn đề, thiết kế giao diện, xử lý dữ liệu, xây dựng logic, lập trình, viết tài liệu, chuẩn bị demo, kiểm thử.
 
 ### Dấu ấn cá nhân trong sản phẩm
 
-Mô tả phần bạn thấy mang dấu ấn cá nhân rõ nhất trong sản phẩm.
+Phần nào trong sản phẩm thể hiện rõ đóng góp của bạn nhất?
 
-Nên viết cụ thể, không chỉ ghi một chức danh chung.
+Nên viết cụ thể, không chỉ ghi tên vai trò.
 
 ### Những việc đã thực sự làm
 
@@ -32,11 +32,13 @@ Nên viết cụ thể, không chỉ ghi một chức danh chung.
 
 ### File, tính năng, dữ liệu, logic, giao diện, tài liệu hoặc phần demo đã đóng góp
 
-Liệt kê các phần cụ thể bạn đã đóng góp. Nếu có tên file, tên tính năng, link màn hình, link tài liệu hoặc phần demo liên quan, hãy ghi rõ.
+Liệt kê các phần cụ thể bạn đã làm.
+
+Nếu có tên file, tên tính năng, link màn hình, link tài liệu hoặc phần demo liên quan, hãy ghi rõ.
 
 ### Bằng chứng đóng góp
 
-Cung cấp bằng chứng có thể kiểm chứng được.
+Ghi bằng chứng có thể kiểm tra được.
 
 Ví dụ:
 
@@ -48,25 +50,25 @@ Ví dụ:
 - Tài liệu liên quan.
 - Ghi chú họp nhóm.
 
-Nếu nhóm làm việc bên ngoài GitHub trước khi đưa lên repo, có thể ghi rõ bằng chứng phù hợp khác.
+Nếu nhóm làm việc bên ngoài GitHub trước khi đưa lên repo, có thể ghi bằng chứng phù hợp khác.
 
 ### Phần đóng góp đó kết nối thế nào với sản phẩm cuối cùng
 
-Giải thích phần bạn làm đã ảnh hưởng thế nào đến sản phẩm cuối cùng.
+Phần bạn làm giúp gì cho sản phẩm cuối cùng?
 
-Ví dụ: giúp người dùng nhập dữ liệu, giúp hệ thống xử lý kết quả, giúp demo rõ ràng hơn, giúp sản phẩm dễ hiểu hơn.
+Ví dụ: giúp người dùng nhập dữ liệu, giúp hệ thống xử lý kết quả, giúp demo rõ hơn hoặc giúp sản phẩm dễ hiểu hơn.
 
 ### Điều cá nhân học được
 
-Ghi lại những điều bạn học được từ phần việc của mình.
+Bạn học được gì từ phần việc của mình?
 
-Nên viết thật, cụ thể và có liên hệ với quá trình làm bài.
+Nên viết thật và cụ thể.
 
 ### Khó khăn đã gặp và cách xử lý
 
-Mô tả một hoặc vài khó khăn cụ thể bạn đã gặp.
+Bạn đã gặp khó khăn gì?
 
-Ghi rõ bạn đã xử lý bằng cách nào, kể cả khi cách xử lý chưa hoàn hảo.
+Bạn đã xử lý khó khăn đó như thế nào?
 
 ### Lời nhắn cho sinh viên khóa sau
 
