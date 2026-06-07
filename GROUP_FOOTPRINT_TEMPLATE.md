@@ -6,6 +6,10 @@ File này giúp người đọc hiểu nhóm đã làm sản phẩm như thế n
 
 Footprint không chỉ là danh sách công việc.
 
+Trong buổi thi cuối kỳ, giảng viên sẽ đối chiếu sản phẩm trong repo với nội dung trong file này.
+
+Nhóm cần nộp bản cứng của group footprint.
+
 ## Tên sản phẩm
 
 Điền tên sản phẩm tại đây.
