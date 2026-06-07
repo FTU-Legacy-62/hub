@@ -1,10 +1,10 @@
 # Group Footprint
 
-Group footprint là dấu vết của cả nhóm.
+Group footprint là phần ghi lại quá trình làm sản phẩm của cả nhóm.
 
-Tài liệu này cho biết nhóm đã xây sản phẩm như thế nào, sản phẩm hoạt động ra sao, nhóm đã lựa chọn gì, học được gì, còn hạn chế gì và khóa sau có thể tiếp tục từ đâu.
+File này giúp người đọc hiểu nhóm đã làm sản phẩm như thế nào, sản phẩm hoạt động ra sao, nhóm đã chọn cách làm nào, học được gì và còn hạn chế gì.
 
-Footprint không chỉ là bản báo cáo kết quả. Đây là phần giúp người đọc hiểu quá trình học tập, quá trình phát triển sản phẩm và các quyết định quan trọng của nhóm.
+Footprint không chỉ là danh sách công việc.
 
 ## Tên sản phẩm
 
@@ -24,29 +24,29 @@ Chưa cập nhật.
 
 ## Vấn đề nhóm muốn giải quyết
 
-Mô tả vấn đề nhóm chọn.
+Nhóm muốn giải quyết vấn đề gì?
 
-Nên ghi rõ:
+Vấn đề này xảy ra trong bối cảnh nào?
 
-- Vấn đề xảy ra trong bối cảnh nào.
-- Ai bị ảnh hưởng bởi vấn đề này.
-- Vì sao nhóm cho rằng vấn đề này đáng giải quyết.
+Ai bị ảnh hưởng bởi vấn đề này?
 
 ## Người dùng mục tiêu
 
-Mô tả người dùng chính của sản phẩm.
+Người dùng chính của sản phẩm là ai?
 
-Nên ghi rõ người dùng cần gì, gặp khó khăn gì và sẽ dùng sản phẩm trong tình huống nào.
+Họ cần gì?
+
+Họ sẽ dùng sản phẩm trong tình huống nào?
 
 ## Sản phẩm hiện làm được gì
 
-Mô tả trạng thái hiện tại của sản phẩm.
+Mô tả những gì sản phẩm hiện đã làm được.
 
-Nên viết cụ thể những chức năng đã làm được, chưa cần trình bày như quảng cáo.
+Nên viết cụ thể theo chức năng hoặc theo tình huống sử dụng.
 
 ## Input
 
-Liệt kê các loại input mà sản phẩm nhận vào.
+Sản phẩm nhận những thông tin đầu vào nào?
 
 Ví dụ:
 
@@ -59,15 +59,15 @@ Ví dụ:
 
 ## Logic hoặc quy tắc xử lý
 
-Giải thích sản phẩm xử lý input như thế nào.
+Sản phẩm xử lý input như thế nào?
 
-Nếu có thuật toán, mô hình, công thức, luật phân loại, điều kiện lọc hoặc quy trình ra quyết định, hãy mô tả rõ ở mức người đọc có thể hiểu được.
+Nếu có thuật toán, công thức, luật phân loại, điều kiện lọc hoặc quy trình ra quyết định, hãy mô tả rõ.
 
-Không cần viết quá kỹ như tài liệu kỹ thuật nội bộ, nhưng phải đủ để người khác hiểu sản phẩm không chỉ là giao diện bên ngoài.
+Không cần viết quá kỹ, nhưng phải đủ để người đọc hiểu cách sản phẩm hoạt động.
 
 ## User flow
 
-Mô tả luồng sử dụng chính của người dùng.
+Mô tả các bước sử dụng chính của người dùng.
 
 Ví dụ:
 
@@ -76,12 +76,12 @@ Ví dụ:
 2. Người dùng nhập hoặc chọn thông tin đầu vào.
 3. Sản phẩm xử lý dữ liệu.
 4. Người dùng xem kết quả.
-5. Người dùng có thể điều chỉnh input hoặc xuất kết quả.
+5. Người dùng điều chỉnh input hoặc xuất kết quả nếu cần.
 ```
 
 ## Output
 
-Mô tả kết quả sản phẩm tạo ra.
+Sản phẩm tạo ra kết quả gì?
 
 Ví dụ:
 
@@ -91,51 +91,52 @@ Ví dụ:
 - Biểu đồ.
 - Phân loại.
 - Danh sách ưu tiên.
-- Nội dung sinh ra từ hệ thống.
+- Nội dung do hệ thống tạo ra.
 
 ## Các lựa chọn thiết kế quan trọng
 
-Ghi lại các quyết định quan trọng mà nhóm đã đưa ra trong quá trình làm sản phẩm.
+Nhóm đã có những lựa chọn quan trọng nào khi làm sản phẩm?
 
 Ví dụ:
 
-- Vì sao chọn loại người dùng này.
+- Vì sao chọn vấn đề này.
+- Vì sao chọn nhóm người dùng này.
 - Vì sao chọn dạng giao diện này.
 - Vì sao chọn nguồn dữ liệu này.
-- Vì sao chọn logic xử lý này.
+- Vì sao chọn cách xử lý này.
 - Vì sao bỏ bớt một tính năng nào đó.
 
 ## Điểm nhóm thấy làm tốt
 
-Nêu những điểm nhóm thấy sản phẩm hoặc quá trình làm việc của nhóm đã làm tốt.
+Nhóm thấy phần nào đã làm tốt?
 
-Nên viết cụ thể, tránh chỉ ghi chung chung.
+Nên viết cụ thể, không chỉ ghi chung chung.
 
 ## Hạn chế hiện tại
 
-Nêu những điều sản phẩm chưa làm được, làm chưa tốt hoặc cần cải thiện.
+Sản phẩm hiện còn hạn chế gì?
 
-Đây không phải là phần trừ điểm tự động; đây là dấu hiệu cho thấy nhóm hiểu sản phẩm của mình.
+Phần nào chưa làm được hoặc cần cải thiện?
 
 ## Điều nhóm học được
 
-Ghi lại những bài học chính của nhóm sau quá trình làm sản phẩm.
+Nhóm học được gì sau quá trình làm sản phẩm?
 
-Có thể bao gồm bài học về:
+Có thể viết về:
 
-- Hiểu vấn đề và người dùng.
-- Làm việc nhóm.
-- Thiết kế sản phẩm.
-- Xử lý dữ liệu.
-- Xây dựng logic.
-- Demo và giải thích sản phẩm.
-- Quản lý thời gian.
+- Cách hiểu vấn đề và người dùng.
+- Cách làm việc nhóm.
+- Cách thiết kế sản phẩm.
+- Cách xử lý dữ liệu.
+- Cách xây dựng logic.
+- Cách demo và giải thích sản phẩm.
+- Cách quản lý thời gian.
 
 ## Gợi ý cho khóa sau
 
 Nếu sinh viên khóa sau muốn tiếp tục hoặc học từ sản phẩm này, nhóm muốn nhắn gì?
 
-Có thể gợi ý:
+Có thể ghi:
 
 - Nên bắt đầu từ phần nào.
 - Nên cải thiện tính năng nào.
