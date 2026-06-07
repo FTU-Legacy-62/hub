@@ -1,8 +1,8 @@
 # Hub nộp bài cuối kỳ môn NHA408E khóa 62
 
-Đây là hub trung tâm cho việc nộp bài cuối kỳ môn NHA408E của khóa 62.
+Đây là repo trung tâm để hướng dẫn và theo dõi việc nộp bài cuối kỳ môn NHA408E khóa 62.
 
-Mỗi nhóm sử dụng repo riêng trong organization `FTU-Legacy-62` để lưu sản phẩm, tài liệu mô tả, footprint của nhóm và footprint cá nhân.
+Mỗi nhóm có một repo riêng trong organization `FTU-Legacy-62`.
 
 Organization của khóa: https://github.com/FTU-Legacy-62
 
@@ -21,31 +21,31 @@ Organization của khóa: https://github.com/FTU-Legacy-62
 | G09 | https://github.com/FTU-Legacy-62/G09 | Chưa cập nhật | Chưa nộp | Chưa cập nhật |
 | G10 | https://github.com/FTU-Legacy-62/G10 | Chưa cập nhật | Chưa nộp | Chưa cập nhật |
 
-Trang theo dõi nộp bài của từng nhóm nằm trong thư mục [`submissions`](submissions/README.md).
+Trang theo dõi từng nhóm nằm trong thư mục [`submissions`](submissions/README.md).
 
 ## Yêu cầu chung
 
-- Tất cả repo nhóm phải ở chế độ public.
-- Mỗi nhóm phải nộp sản phẩm thật, không chỉ nộp slide thuyết trình.
-- Mỗi repo nhóm phải có `README.md`.
-- Mỗi repo nhóm phải có `GROUP_FOOTPRINT.md`.
-- Mỗi repo nhóm phải có `INDIVIDUAL_FOOTPRINT.md`.
-- Sản phẩm cuối kỳ cần thể hiện rõ: vấn đề, người dùng mục tiêu, mô tả sản phẩm, input, logic hoặc quy tắc xử lý, user flow, output, cách demo và đóng góp của từng thành viên.
+- Repo của nhóm phải để public.
+- Nhóm phải nộp sản phẩm thật, không chỉ nộp slide.
+- Repo nhóm phải có `README.md`.
+- Repo nhóm phải có `GROUP_FOOTPRINT.md`.
+- Repo nhóm phải có `INDIVIDUAL_FOOTPRINT.md`.
+- Sản phẩm cần nói rõ: vấn đề, người dùng, mô tả sản phẩm, input, cách xử lý, user flow, output, cách demo và đóng góp của từng thành viên.
 - Sản phẩm không cần hoàn hảo, nhưng phải mở được, xem được, giải thích được và demo được.
-- Không upload API key, mật khẩu, dữ liệu cá nhân, dữ liệu riêng tư, file nội bộ, hoặc bất kỳ file nào nhóm không có quyền công khai.
-- Nếu sản phẩm có sử dụng dữ liệu, nhóm phải ghi rõ dữ liệu đó là dữ liệu công khai, dữ liệu giả lập, dữ liệu tự tạo, hay dữ liệu lấy từ nguồn khác.
+- Không upload API key, mật khẩu, token, dữ liệu cá nhân, dữ liệu riêng tư, file nội bộ hoặc file mà nhóm không có quyền công khai.
+- Nếu có dùng dữ liệu, nhóm phải ghi rõ đó là dữ liệu công khai, dữ liệu giả lập, dữ liệu tự tạo hay dữ liệu lấy từ nguồn khác.
 - Sau hạn nộp bài, giảng viên có thể thay đổi quyền chỉnh sửa để lưu lại bản nộp chính thức.
 
-## Checklist ngắn trước khi nộp
+## Checklist trước khi nộp
 
 - Repo nhóm đã public.
-- Sản phẩm có thể mở, xem, chạy hoặc demo được.
-- Repo có `README.md`, `GROUP_FOOTPRINT.md`, `INDIVIDUAL_FOOTPRINT.md`.
+- Sản phẩm có thể mở hoặc chạy được.
+- Repo có đủ `README.md`, `GROUP_FOOTPRINT.md` và `INDIVIDUAL_FOOTPRINT.md`.
 - README có mô tả sản phẩm và cách mở hoặc chạy.
-- Footprint nhóm mô tả rõ sản phẩm, logic xử lý, user flow, output và bài học.
-- Footprint cá nhân ghi rõ đóng góp của từng thành viên và có bằng chứng kiểm chứng được.
-- Không có API key, mật khẩu, dữ liệu cá nhân, dữ liệu riêng tư hoặc file không được phép công khai.
-- Nếu có dữ liệu, đã ghi rõ nguồn và tính chất dữ liệu.
+- Group footprint nói rõ sản phẩm làm gì, xử lý thế nào, người dùng đi qua các bước nào và kết quả là gì.
+- Individual footprint ghi rõ từng thành viên đã làm gì và có bằng chứng kèm theo.
+- Không có API key, mật khẩu, token, dữ liệu riêng tư hoặc file không được phép công khai.
+- Nếu có dữ liệu, đã ghi rõ nguồn và loại dữ liệu.
 
 ## Tài liệu hướng dẫn
 
