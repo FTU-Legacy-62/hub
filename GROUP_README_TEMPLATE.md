@@ -16,15 +16,19 @@ Gxx
 
 ## Mô tả ngắn về sản phẩm
 
-Viết 3 đến 6 câu giúp người đọc bên ngoài hiểu sản phẩm là gì, dùng để làm gì và kết quả chính mà sản phẩm tạo ra.
+Viết từ 3 đến 6 câu để người đọc bên ngoài hiểu sản phẩm là gì, dùng để làm gì và tạo ra kết quả gì.
 
 ## Vấn đề sản phẩm giải quyết
 
-Mô tả vấn đề cụ thể mà nhóm chọn. Nên viết rõ bối cảnh, ai đang gặp vấn đề này và vì sao vấn đề đáng quan tâm.
+Mô tả vấn đề cụ thể mà nhóm chọn.
+
+Nên viết rõ bối cảnh, ai đang gặp vấn đề này và vì sao vấn đề đáng quan tâm.
 
 ## Người dùng mục tiêu
 
-Mô tả nhóm người dùng chính của sản phẩm. Có thể ghi thêm nhu cầu, thói quen hoặc tình huống sử dụng của họ.
+Mô tả nhóm người dùng chính của sản phẩm.
+
+Có thể ghi thêm nhu cầu, thói quen hoặc tình huống sử dụng của họ.
 
 ## Tính năng chính
 
@@ -62,4 +66,8 @@ Nếu dữ liệu lấy từ nguồn khác, ghi rõ nguồn dữ liệu và các
 
 ## Ghi chú thêm
 
-README là mặt tiền của sản phẩm. Nội dung nên ngắn gọn, rõ ràng và dễ hiểu với người đọc bên ngoài. Không cần lặp lại quá nhiều nội dung trong `GROUP_FOOTPRINT.md`.
+README là mặt tiền của sản phẩm.
+
+Nội dung nên ngắn gọn, rõ ràng và dễ hiểu với người đọc bên ngoài.
+
+Không cần lặp lại quá nhiều nội dung trong `GROUP_FOOTPRINT.md`.
