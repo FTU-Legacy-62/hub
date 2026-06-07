@@ -1,6 +1,6 @@
 # Tên sản phẩm
 
-Điền tên sản phẩm của nhóm tại đây.
+Điền tên sản phẩm của nhóm.
 
 ## Mã nhóm
 
@@ -16,19 +16,23 @@ Gxx
 
 ## Mô tả ngắn về sản phẩm
 
-Viết từ 3 đến 6 câu để người đọc bên ngoài hiểu sản phẩm là gì, dùng để làm gì và tạo ra kết quả gì.
+Viết ngắn gọn sản phẩm là gì và dùng để làm gì.
+
+Nên viết khoảng 3 đến 6 câu.
 
 ## Vấn đề sản phẩm giải quyết
 
-Mô tả vấn đề cụ thể mà nhóm chọn.
+Sản phẩm giải quyết vấn đề gì?
 
-Nên viết rõ bối cảnh, ai đang gặp vấn đề này và vì sao vấn đề đáng quan tâm.
+Ai đang gặp vấn đề này?
+
+Vì sao vấn đề này đáng quan tâm?
 
 ## Người dùng mục tiêu
 
-Mô tả nhóm người dùng chính của sản phẩm.
+Người dùng chính của sản phẩm là ai?
 
-Có thể ghi thêm nhu cầu, thói quen hoặc tình huống sử dụng của họ.
+Họ dùng sản phẩm trong tình huống nào?
 
 ## Tính năng chính
 
@@ -38,18 +42,18 @@ Có thể ghi thêm nhu cầu, thói quen hoặc tình huống sử dụng của
 
 ## Cách mở hoặc chạy sản phẩm
 
-Ghi các bước ngắn gọn để người khác có thể mở, chạy hoặc xem sản phẩm.
+Ghi các bước để người khác có thể mở, chạy hoặc xem sản phẩm.
 
 Ví dụ:
 
 ```text
 1. Mở link demo.
-2. Đăng nhập bằng tài khoản demo nếu có.
-3. Chọn chức năng cần xem.
-4. Thực hiện các bước demo theo hướng dẫn.
+2. Chọn chức năng cần xem.
+3. Thực hiện các bước demo.
+4. Xem kết quả.
 ```
 
-Nếu sản phẩm cần cài đặt, ghi rõ công cụ cần có và lệnh cần chạy.
+Nếu cần cài đặt, ghi rõ công cụ cần có và lệnh cần chạy.
 
 ## Link demo nếu có
 
@@ -60,14 +64,14 @@ Không ghi mật khẩu thật, token thật hoặc thông tin riêng tư lên G
 
 ## Ghi chú về dữ liệu nếu có
 
-Nếu sản phẩm sử dụng dữ liệu, ghi rõ dữ liệu là dữ liệu công khai, dữ liệu giả lập, dữ liệu tự tạo hay dữ liệu lấy từ nguồn khác.
+Nếu sản phẩm có dùng dữ liệu, ghi rõ dữ liệu đó là dữ liệu công khai, dữ liệu giả lập, dữ liệu tự tạo hay dữ liệu lấy từ nguồn khác.
 
-Nếu dữ liệu lấy từ nguồn khác, ghi rõ nguồn dữ liệu và cách nhóm sử dụng dữ liệu đó.
+Nếu dữ liệu lấy từ nguồn khác, ghi rõ nguồn dữ liệu.
 
 ## Ghi chú thêm
 
-README là mặt tiền của sản phẩm.
+README là trang giới thiệu sản phẩm.
 
-Nội dung nên ngắn gọn, rõ ràng và dễ hiểu với người đọc bên ngoài.
+Nội dung nên ngắn, rõ và dễ hiểu.
 
-Không cần lặp lại quá nhiều nội dung trong `GROUP_FOOTPRINT.md`.
+Không cần viết quá nhiều chi tiết giống `GROUP_FOOTPRINT.md`.
