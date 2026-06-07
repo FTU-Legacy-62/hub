@@ -44,6 +44,8 @@ Họ dùng sản phẩm trong tình huống nào?
 
 Ghi các bước để người khác có thể mở, chạy hoặc xem sản phẩm.
 
+Trong buổi thi cuối kỳ, nhóm sẽ demo sản phẩm trực tiếp từ repo này. Vì vậy, phần hướng dẫn cần đủ rõ để giảng viên có thể mở repo, đọc hướng dẫn và xem hoặc chạy demo.
+
 Ví dụ:
 
 ```text
