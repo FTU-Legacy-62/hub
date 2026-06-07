@@ -1,6 +1,8 @@
-# Hub nộp bài cuối kỳ NHA408E khóa 62
+# Hub nộp bài cuối kỳ môn NHA408E khóa 62
 
-Đây là hub trung tâm cho việc nộp bài cuối kỳ môn NHA408E của khóa 62. Mỗi nhóm sử dụng repo riêng trong organization `FTU-Legacy-62` để lưu sản phẩm, tài liệu mô tả, footprint của nhóm và footprint cá nhân.
+Đây là hub trung tâm cho việc nộp bài cuối kỳ môn NHA408E của khóa 62.
+
+Mỗi nhóm sử dụng repo riêng trong organization `FTU-Legacy-62` để lưu sản phẩm, tài liệu mô tả, footprint của nhóm và footprint cá nhân.
 
 Organization của khóa: https://github.com/FTU-Legacy-62
 
@@ -28,8 +30,8 @@ Trang theo dõi nộp bài của từng nhóm nằm trong thư mục [`submissio
 - Mỗi repo nhóm phải có `README.md`.
 - Mỗi repo nhóm phải có `GROUP_FOOTPRINT.md`.
 - Mỗi repo nhóm phải có `INDIVIDUAL_FOOTPRINT.md`.
-- Sản phẩm cuối kỳ cần thể hiện rõ: vấn đề, người dùng mục tiêu, mô tả sản phẩm, input, logic hoặc quy tắc xử lý, user flow, output, cách demo, và đóng góp của từng thành viên.
-- Sản phẩm không cần hoàn hảo, nhưng phải mở được, xem được, giải thích được, và có thể demo được.
+- Sản phẩm cuối kỳ cần thể hiện rõ: vấn đề, người dùng mục tiêu, mô tả sản phẩm, input, logic hoặc quy tắc xử lý, user flow, output, cách demo và đóng góp của từng thành viên.
+- Sản phẩm không cần hoàn hảo, nhưng phải mở được, xem được, giải thích được và demo được.
 - Không upload API key, mật khẩu, dữ liệu cá nhân, dữ liệu riêng tư, file nội bộ, hoặc bất kỳ file nào nhóm không có quyền công khai.
 - Nếu sản phẩm có sử dụng dữ liệu, nhóm phải ghi rõ dữ liệu đó là dữ liệu công khai, dữ liệu giả lập, dữ liệu tự tạo, hay dữ liệu lấy từ nguồn khác.
 - Sau hạn nộp bài, giảng viên có thể thay đổi quyền chỉnh sửa để lưu lại bản nộp chính thức.
