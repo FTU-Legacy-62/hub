@@ -2,7 +2,7 @@
 
 Thư mục này dùng để theo dõi trạng thái nộp bài cuối kỳ môn NHA408E khóa 62.
 
-Mỗi nhóm có một file riêng:
+Mỗi nhóm có một file riêng.
 
 | Nhóm | File theo dõi | Repo nhóm |
 |---|---|---|
@@ -19,11 +19,13 @@ Mỗi nhóm có một file riêng:
 
 ## Cách dùng
 
-Mỗi file nhóm ghi lại tên sản phẩm, link repo, link demo, trạng thái nộp bài và checklist các file cần có trong repo nhóm.
+Mỗi file nhóm ghi tên sản phẩm, link repo, link demo, trạng thái nộp bài và checklist cần kiểm tra.
 
 Trạng thái ban đầu là `Chưa nộp`.
 
-Khi nhóm hoàn tất, giảng viên hoặc người được phân quyền có thể cập nhật trạng thái thành `Đã nộp` hoặc ghi chú thêm nếu cần bổ sung.
+Khi nhóm hoàn tất, giảng viên hoặc người được phân quyền có thể cập nhật trạng thái thành `Đã nộp`.
+
+Nếu nhóm còn thiếu nội dung, có thể ghi chú trong file của nhóm.
 
 ## Nhắc lại yêu cầu
 
@@ -33,4 +35,4 @@ Khi nhóm hoàn tất, giảng viên hoặc người được phân quyền có 
 - Repo nhóm phải có `GROUP_FOOTPRINT.md`.
 - Repo nhóm phải có `INDIVIDUAL_FOOTPRINT.md`.
 - Sản phẩm phải mở được, xem được, giải thích được và demo được.
-- Không upload API key, mật khẩu, dữ liệu cá nhân, dữ liệu riêng tư hoặc file không được phép công khai.
+- Không upload API key, mật khẩu, token, dữ liệu riêng tư hoặc file không được phép công khai.
