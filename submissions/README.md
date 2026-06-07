@@ -31,8 +31,12 @@ Nếu nhóm còn thiếu nội dung, có thể ghi chú trong file của nhóm.
 
 - Repo nhóm phải public.
 - Nhóm phải nộp sản phẩm thật, không chỉ nộp slide.
+- Repo nhóm là bản nộp chính thức.
+- Trong buổi thi cuối kỳ, nhóm sẽ demo sản phẩm trực tiếp từ repo của nhóm.
+- Slide thuyết trình chỉ dùng như một lựa chọn backup.
 - Repo nhóm phải có `README.md`.
 - Repo nhóm phải có `GROUP_FOOTPRINT.md`.
 - Repo nhóm phải có `INDIVIDUAL_FOOTPRINT.md`.
 - Sản phẩm phải mở được, xem được, giải thích được và demo được.
+- Nhóm cần nộp bản cứng của group footprint và individual footprint.
 - Không upload API key, mật khẩu, token, dữ liệu riêng tư hoặc file không được phép công khai.
