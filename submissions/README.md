@@ -21,7 +21,9 @@ Mỗi nhóm có một file riêng:
 
 Mỗi file nhóm ghi lại tên sản phẩm, link repo, link demo, trạng thái nộp bài và checklist các file cần có trong repo nhóm.
 
-Trạng thái ban đầu là `Chưa nộp`. Khi nhóm hoàn tất, giảng viên hoặc người được phân quyền có thể cập nhật trạng thái thành `Đã nộp` hoặc ghi chú thêm nếu cần bổ sung.
+Trạng thái ban đầu là `Chưa nộp`.
+
+Khi nhóm hoàn tất, giảng viên hoặc người được phân quyền có thể cập nhật trạng thái thành `Đã nộp` hoặc ghi chú thêm nếu cần bổ sung.
 
 ## Nhắc lại yêu cầu
 
