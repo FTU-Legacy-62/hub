@@ -1,6 +1,8 @@
 # Group Footprint
 
-Group footprint là dấu vết của cả nhóm. Tài liệu này cho biết nhóm đã xây sản phẩm như thế nào, sản phẩm hoạt động ra sao, nhóm đã lựa chọn gì, học được gì, còn hạn chế gì và khóa sau có thể tiếp tục từ đâu.
+Group footprint là dấu vết của cả nhóm.
+
+Tài liệu này cho biết nhóm đã xây sản phẩm như thế nào, sản phẩm hoạt động ra sao, nhóm đã lựa chọn gì, học được gì, còn hạn chế gì và khóa sau có thể tiếp tục từ đâu.
 
 Footprint không chỉ là bản báo cáo kết quả. Đây là phần giúp người đọc hiểu quá trình học tập, quá trình phát triển sản phẩm và các quyết định quan trọng của nhóm.
 
@@ -22,7 +24,9 @@ Chưa cập nhật.
 
 ## Vấn đề nhóm muốn giải quyết
 
-Mô tả vấn đề nhóm chọn. Nên ghi rõ:
+Mô tả vấn đề nhóm chọn.
+
+Nên ghi rõ:
 
 - Vấn đề xảy ra trong bối cảnh nào.
 - Ai bị ảnh hưởng bởi vấn đề này.
@@ -30,11 +34,15 @@ Mô tả vấn đề nhóm chọn. Nên ghi rõ:
 
 ## Người dùng mục tiêu
 
-Mô tả người dùng chính của sản phẩm. Nên ghi rõ người dùng cần gì, gặp khó khăn gì và sẽ dùng sản phẩm trong tình huống nào.
+Mô tả người dùng chính của sản phẩm.
+
+Nên ghi rõ người dùng cần gì, gặp khó khăn gì và sẽ dùng sản phẩm trong tình huống nào.
 
 ## Sản phẩm hiện làm được gì
 
-Mô tả trạng thái hiện tại của sản phẩm. Nên viết cụ thể những chức năng đã làm được, chưa cần trình bày như quảng cáo.
+Mô tả trạng thái hiện tại của sản phẩm.
+
+Nên viết cụ thể những chức năng đã làm được, chưa cần trình bày như quảng cáo.
 
 ## Input
 
@@ -51,7 +59,9 @@ Ví dụ:
 
 ## Logic hoặc quy tắc xử lý
 
-Giải thích sản phẩm xử lý input như thế nào. Nếu có thuật toán, mô hình, công thức, luật phân loại, điều kiện lọc hoặc quy trình ra quyết định, hãy mô tả rõ ở mức người đọc có thể hiểu được.
+Giải thích sản phẩm xử lý input như thế nào.
+
+Nếu có thuật toán, mô hình, công thức, luật phân loại, điều kiện lọc hoặc quy trình ra quyết định, hãy mô tả rõ ở mức người đọc có thể hiểu được.
 
 Không cần viết quá kỹ như tài liệu kỹ thuật nội bộ, nhưng phải đủ để người khác hiểu sản phẩm không chỉ là giao diện bên ngoài.
 
@@ -97,11 +107,15 @@ Ví dụ:
 
 ## Điểm nhóm thấy làm tốt
 
-Nêu những điểm nhóm thấy sản phẩm hoặc quá trình làm việc của nhóm đã làm tốt. Nên viết cụ thể, tránh chỉ ghi chung chung.
+Nêu những điểm nhóm thấy sản phẩm hoặc quá trình làm việc của nhóm đã làm tốt.
+
+Nên viết cụ thể, tránh chỉ ghi chung chung.
 
 ## Hạn chế hiện tại
 
-Nêu những điều sản phẩm chưa làm được, làm chưa tốt hoặc cần cải thiện. Đây không phải là phần trừ điểm tự động; đây là dấu hiệu cho thấy nhóm hiểu sản phẩm của mình.
+Nêu những điều sản phẩm chưa làm được, làm chưa tốt hoặc cần cải thiện.
+
+Đây không phải là phần trừ điểm tự động; đây là dấu hiệu cho thấy nhóm hiểu sản phẩm của mình.
 
 ## Điều nhóm học được
 
