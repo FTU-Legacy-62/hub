@@ -35,6 +35,12 @@ Mỗi nhóm phải nộp một sản phẩm thật.
 
 Không nộp chỉ mỗi slide thuyết trình.
 
+Repo nhóm là bản nộp chính thức.
+
+Trong buổi thi cuối kỳ, nhóm sẽ demo sản phẩm trực tiếp từ repo của nhóm.
+
+Slide thuyết trình chỉ dùng như một lựa chọn backup.
+
 Sản phẩm có thể là website, ứng dụng, dashboard, prototype, bài phân tích dữ liệu, mô hình thử nghiệm hoặc một sản phẩm số khác phù hợp với đề tài.
 
 Sản phẩm cần nói rõ:
@@ -52,6 +58,26 @@ Sản phẩm cần nói rõ:
 Sản phẩm không cần hoàn hảo.
 
 Tuy nhiên, sản phẩm phải mở được, xem được, giải thích được và demo được.
+
+Giảng viên cần có thể mở repo, đọc hướng dẫn, chạy hoặc xem demo sản phẩm, rồi đối chiếu sản phẩm với `GROUP_FOOTPRINT.md` và `INDIVIDUAL_FOOTPRINT.md`.
+
+Nhóm cần nộp bản cứng của group footprint và individual footprint.
+
+## Việc đánh giá cuối kỳ
+
+Việc đánh giá cuối kỳ sẽ dựa trên ba phần chính.
+
+1. Sản phẩm trong repo nhóm.
+
+Sản phẩm có mở được, chạy được hoặc demo được không. Sản phẩm có giải quyết đúng vấn đề đã chọn không. Input, logic, user flow và output có rõ không.
+
+2. `GROUP_FOOTPRINT.md`.
+
+Nhóm có giải thích rõ quá trình xây sản phẩm, logic xử lý, lựa chọn thiết kế, hạn chế và bài học không.
+
+3. `INDIVIDUAL_FOOTPRINT.md`.
+
+Từng thành viên có để lại dấu vết đóng góp cụ thể, có bằng chứng kiểm chứng được và có thể giải thích phần việc của mình không.
 
 ## Yêu cầu public repo
 
@@ -111,7 +137,9 @@ Nhóm có thể dùng các mẫu trong hub:
 5. Kiểm tra repo đang ở chế độ public.
 6. Kiểm tra sản phẩm có thể mở, xem, chạy hoặc demo được.
 7. Kiểm tra không có API key, mật khẩu, dữ liệu riêng tư hoặc file không được phép công khai.
-8. Cập nhật trang `submissions/Gxx.md` nếu giảng viên yêu cầu.
+8. Chuẩn bị demo trực tiếp từ repo trong buổi thi cuối kỳ.
+9. In bản cứng của group footprint và individual footprint.
+10. Cập nhật trang `submissions/Gxx.md` nếu giảng viên yêu cầu.
 
 ## Checklist cuối cùng
 
@@ -127,3 +155,5 @@ Nhóm có thể dùng các mẫu trong hub:
 - Mỗi thành viên có bằng chứng đóng góp nếu có thể.
 - Không có API key, mật khẩu, token, dữ liệu riêng tư hoặc file không được phép công khai.
 - Nếu có dữ liệu, đã ghi rõ loại dữ liệu và nguồn dữ liệu.
+- Nhóm đã chuẩn bị demo trực tiếp từ repo.
+- Nhóm đã chuẩn bị bản cứng của group footprint và individual footprint.
