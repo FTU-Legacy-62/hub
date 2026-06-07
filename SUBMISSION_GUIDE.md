@@ -10,6 +10,20 @@ Repo `FTU-Legacy-62/hub` là repo hướng dẫn chung. Repo này có link đế
 
 Organization của khóa: https://github.com/FTU-Legacy-62
 
+## Nộp bài và demo cuối kỳ
+
+Repo nhóm là bản nộp chính thức.
+
+Trong buổi thi cuối kỳ, nhóm sẽ demo sản phẩm trực tiếp từ repo của nhóm.
+
+Giảng viên cần có thể mở repo, đọc hướng dẫn trong `README.md`, chạy hoặc xem demo sản phẩm, rồi đối chiếu sản phẩm với `GROUP_FOOTPRINT.md` và `INDIVIDUAL_FOOTPRINT.md`.
+
+Slide thuyết trình không được tính là sản phẩm chính.
+
+Slide chỉ dùng để hỗ trợ giải thích hoặc làm phương án dự phòng trong buổi demo.
+
+Ngoài repo chính thức, nhóm cần nộp bản cứng của group footprint và individual footprint.
+
 ## Repo nhóm dùng để làm gì
 
 Mỗi nhóm có một repo riêng:
@@ -62,6 +76,24 @@ Tuy nhiên, sản phẩm phải mở được, xem được, giải thích đư�
 Giảng viên cần có thể mở repo, đọc hướng dẫn, chạy hoặc xem demo sản phẩm, rồi đối chiếu sản phẩm với `GROUP_FOOTPRINT.md` và `INDIVIDUAL_FOOTPRINT.md`.
 
 Nhóm cần nộp bản cứng của group footprint và individual footprint.
+
+## Thế nào là sản phẩm chạy được hoặc demo được
+
+Sản phẩm được coi là có thể demo khi người khác có thể mở, chạy, xem hoặc thao tác với sản phẩm theo hướng dẫn trong `README.md`.
+
+Tùy loại sản phẩm, nhóm cần chuẩn bị tối thiểu như sau:
+
+- Nếu là website hoặc web app: cần có link demo hoặc hướng dẫn chạy local rõ ràng.
+- Nếu là file Excel hoặc Google Sheet: cần có file hoặc link truy cập, kèm hướng dẫn nhập dữ liệu và xem kết quả.
+- Nếu là dashboard: cần có link dashboard, file dashboard hoặc hướng dẫn mở dashboard.
+- Nếu là Python notebook: cần có file notebook, dữ liệu mẫu nếu cần, và hướng dẫn chạy các cell chính.
+- Nếu là ứng dụng Python hoặc JavaScript: cần có mã nguồn, file hướng dẫn cài đặt, thư viện cần dùng và lệnh chạy.
+- Nếu là prototype tương tác: cần có link Figma, link demo hoặc file có thể mở được.
+- Nếu là quy trình phân tích dữ liệu: cần có dữ liệu mẫu, file xử lý, kết quả đầu ra và hướng dẫn chạy hoặc kiểm tra.
+
+Slide thuyết trình không được tính là sản phẩm chính.
+
+Slide chỉ dùng để hỗ trợ giải thích hoặc làm phương án dự phòng trong buổi demo.
 
 ## Việc đánh giá cuối kỳ
 
