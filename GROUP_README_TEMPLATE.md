@@ -46,6 +46,8 @@ Ghi các bước để người khác có thể mở, chạy hoặc xem sản ph
 
 Trong buổi thi cuối kỳ, nhóm sẽ demo sản phẩm trực tiếp từ repo này. Vì vậy, phần hướng dẫn cần đủ rõ để giảng viên có thể mở repo, đọc hướng dẫn và xem hoặc chạy demo.
 
+Sản phẩm được coi là có thể demo khi người khác có thể mở, chạy, xem hoặc thao tác với sản phẩm theo hướng dẫn trong file này.
+
 Ví dụ:
 
 ```text
