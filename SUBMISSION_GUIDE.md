@@ -1,23 +1,18 @@
 # Hướng dẫn nộp bài cuối kỳ môn NHA408E khóa 62
 
-Tài liệu này hướng dẫn các nhóm nộp bài cuối kỳ môn NHA408E khóa 62 qua GitHub organization `FTU-Legacy-62`.
+Tài liệu này hướng dẫn các nhóm nộp bài cuối kỳ môn NHA408E khóa 62 trên GitHub.
 
-## Mục đích của organization và hub
+## Organization và hub dùng để làm gì
 
-Organization `FTU-Legacy-62` là không gian chung để lưu repo sản phẩm cuối kỳ của cả lớp.
+Organization `FTU-Legacy-62` là nơi chứa repo của tất cả các nhóm.
 
-Repo `FTU-Legacy-62/hub` là nơi tập trung đường dẫn, hướng dẫn, mẫu tài liệu và trạng thái nộp bài của 10 nhóm.
+Repo `FTU-Legacy-62/hub` là repo hướng dẫn chung. Repo này có link đến repo của từng nhóm, mẫu tài liệu và trang theo dõi nộp bài.
 
-Hub giúp giảng viên và sinh viên:
-
-- Tìm nhanh repo của từng nhóm.
-- Biết nhóm đã nộp gì và còn thiếu gì.
-- Có mẫu thống nhất để mô tả sản phẩm, quá trình làm việc và đóng góp cá nhân.
-- Lưu lại dấu vết học tập để các khóa sau có thể tham khảo.
+Organization của khóa: https://github.com/FTU-Legacy-62
 
 ## Repo nhóm dùng để làm gì
 
-Mỗi nhóm có một repo riêng trong organization:
+Mỗi nhóm có một repo riêng:
 
 - G01: https://github.com/FTU-Legacy-62/G01
 - G02: https://github.com/FTU-Legacy-62/G02
@@ -30,35 +25,41 @@ Mỗi nhóm có một repo riêng trong organization:
 - G09: https://github.com/FTU-Legacy-62/G09
 - G10: https://github.com/FTU-Legacy-62/G10
 
-Repo nhóm là nơi lưu sản phẩm cuối kỳ và tài liệu đi kèm.
+Repo nhóm là nơi nộp sản phẩm cuối kỳ.
 
-Nhóm cần đưa vào repo những gì cần thiết để người khác có thể mở, xem, hiểu và demo sản phẩm.
+Trong repo nhóm, nhóm cần để các file và tài liệu cần thiết để người khác có thể xem, hiểu và demo sản phẩm.
 
 ## Sản phẩm cuối kỳ cần có gì
 
-Mỗi nhóm phải nộp sản phẩm thật, không chỉ nộp slide thuyết trình.
+Mỗi nhóm phải nộp một sản phẩm thật.
 
-Sản phẩm có thể là ứng dụng, website, dashboard, mô hình thử nghiệm, quy trình phân tích dữ liệu, prototype tương tác hoặc một sản phẩm số khác phù hợp với đề tài.
+Không nộp chỉ mỗi slide thuyết trình.
 
-Sản phẩm cần thể hiện rõ:
+Sản phẩm có thể là website, ứng dụng, dashboard, prototype, bài phân tích dữ liệu, mô hình thử nghiệm hoặc một sản phẩm số khác phù hợp với đề tài.
 
-- Vấn đề nhóm muốn giải quyết.
-- Người dùng mục tiêu.
-- Mô tả sản phẩm.
-- Input của sản phẩm.
-- Logic hoặc quy tắc xử lý.
-- User flow.
-- Output.
-- Cách mở, chạy hoặc demo.
-- Đóng góp của từng thành viên.
+Sản phẩm cần nói rõ:
 
-Sản phẩm không cần hoàn hảo, nhưng phải mở được, xem được, giải thích được và demo được.
+- Nhóm giải quyết vấn đề gì.
+- Người dùng mục tiêu là ai.
+- Sản phẩm làm gì.
+- Input là gì.
+- Sản phẩm xử lý input như thế nào.
+- Người dùng sử dụng sản phẩm qua những bước nào.
+- Output là gì.
+- Demo sản phẩm bằng cách nào.
+- Mỗi thành viên đóng góp phần nào.
+
+Sản phẩm không cần hoàn hảo.
+
+Tuy nhiên, sản phẩm phải mở được, xem được, giải thích được và demo được.
 
 ## Yêu cầu public repo
 
-Tất cả repo nhóm phải ở chế độ public để giảng viên, các nhóm khác và sinh viên khóa sau có thể xem được.
+Tất cả repo nhóm phải để public.
 
-Trước khi nộp, nhóm cần kiểm tra lại repo của mình không chứa thông tin nhạy cảm.
+Repo public giúp giảng viên, các nhóm khác và sinh viên khóa sau xem được bài làm.
+
+Trước khi public hoặc nộp bài, nhóm cần kiểm tra kỹ để không đưa thông tin nhạy cảm lên GitHub.
 
 Sau hạn nộp bài, giảng viên có thể thay đổi quyền chỉnh sửa để lưu lại bản nộp chính thức.
 
@@ -72,28 +73,28 @@ Không upload lên GitHub:
 - Dữ liệu cá nhân.
 - Dữ liệu riêng tư.
 - File nội bộ.
-- Bất kỳ file nào nhóm không có quyền công khai.
+- File mà nhóm không có quyền công khai.
 
-Nếu sản phẩm có sử dụng dữ liệu, nhóm phải ghi rõ dữ liệu đó là:
+Nếu sản phẩm có dùng dữ liệu, nhóm phải ghi rõ dữ liệu đó là loại nào:
 
 - Dữ liệu công khai.
 - Dữ liệu giả lập.
 - Dữ liệu tự tạo.
 - Dữ liệu lấy từ nguồn khác.
 
-Nếu dữ liệu lấy từ nguồn khác, nhóm cần ghi rõ nguồn và cách sử dụng ở mức đủ để người đọc hiểu.
+Nếu dữ liệu lấy từ nguồn khác, nhóm cần ghi nguồn dữ liệu.
 
-## Yêu cầu footprint
+## Yêu cầu về footprint
 
-Footprint là dấu vết học tập và đóng góp mà nhóm để lại cho người đọc sau này.
+Footprint là phần ghi lại nhóm đã làm gì, từng thành viên đã đóng góp gì và nhóm học được gì trong quá trình làm sản phẩm.
 
 Footprint không chỉ là danh sách công việc.
 
-Repo nhóm cần có:
+Repo nhóm cần có 3 file:
 
-- `README.md`: mặt tiền của sản phẩm, giúp người đọc bên ngoài hiểu nhanh sản phẩm là gì và mở như thế nào.
-- `GROUP_FOOTPRINT.md`: dấu vết của cả nhóm, mô tả cách nhóm xây sản phẩm, lựa chọn đã đưa ra, điều học được, hạn chế và hướng tiếp tục.
-- `INDIVIDUAL_FOOTPRINT.md`: dấu vết cá nhân của từng thành viên, mô tả đóng góp cụ thể, bằng chứng đóng góp và điều cá nhân học được.
+- `README.md`: giới thiệu ngắn gọn sản phẩm cho người đọc bên ngoài.
+- `GROUP_FOOTPRINT.md`: mô tả sản phẩm, cách sản phẩm hoạt động, lựa chọn của nhóm, hạn chế và điều nhóm học được.
+- `INDIVIDUAL_FOOTPRINT.md`: ghi rõ đóng góp của từng thành viên, kèm bằng chứng nếu có.
 
 Nhóm có thể dùng các mẫu trong hub:
 
@@ -101,28 +102,28 @@ Nhóm có thể dùng các mẫu trong hub:
 - `GROUP_FOOTPRINT_TEMPLATE.md`
 - `INDIVIDUAL_FOOTPRINT_TEMPLATE.md`
 
-## Quy trình nộp bài đề xuất
+## Các bước nộp bài
 
-1. Đưa sản phẩm và tài liệu cần thiết vào repo nhóm.
+1. Đưa sản phẩm vào repo nhóm.
 2. Tạo hoặc cập nhật `README.md`.
 3. Tạo hoặc cập nhật `GROUP_FOOTPRINT.md`.
 4. Tạo hoặc cập nhật `INDIVIDUAL_FOOTPRINT.md`.
-5. Kiểm tra repo đang public.
+5. Kiểm tra repo đang ở chế độ public.
 6. Kiểm tra sản phẩm có thể mở, xem, chạy hoặc demo được.
-7. Kiểm tra không có dữ liệu nhạy cảm hoặc file không được phép công khai.
-8. Cập nhật trang `submissions/Gxx.md` trong hub nếu giảng viên yêu cầu nhóm tự điền trạng thái.
+7. Kiểm tra không có API key, mật khẩu, dữ liệu riêng tư hoặc file không được phép công khai.
+8. Cập nhật trang `submissions/Gxx.md` nếu giảng viên yêu cầu.
 
-## Checklist cuối cùng cho nhóm
+## Checklist cuối cùng
 
 - Repo nhóm đã public.
-- Sản phẩm thật đã được đưa lên repo.
-- Sản phẩm không chỉ là slide thuyết trình.
-- Có `README.md`.
-- Có `GROUP_FOOTPRINT.md`.
-- Có `INDIVIDUAL_FOOTPRINT.md`.
-- README mô tả rõ sản phẩm và cách mở hoặc chạy.
-- Group footprint mô tả rõ vấn đề, người dùng mục tiêu, input, logic xử lý, user flow, output, demo, lựa chọn thiết kế, hạn chế và bài học.
+- Repo có sản phẩm thật.
+- Sản phẩm không chỉ là slide.
+- Repo có `README.md`.
+- Repo có `GROUP_FOOTPRINT.md`.
+- Repo có `INDIVIDUAL_FOOTPRINT.md`.
+- README có mô tả sản phẩm và cách mở hoặc chạy.
+- Group footprint có vấn đề, người dùng, input, cách xử lý, user flow, output, demo, hạn chế và bài học.
 - Individual footprint có mục riêng cho từng thành viên.
-- Mỗi thành viên có bằng chứng đóng góp cụ thể.
-- Không có API key, mật khẩu, token, dữ liệu cá nhân, dữ liệu riêng tư hoặc file không được phép công khai.
+- Mỗi thành viên có bằng chứng đóng góp nếu có thể.
+- Không có API key, mật khẩu, token, dữ liệu riêng tư hoặc file không được phép công khai.
 - Nếu có dữ liệu, đã ghi rõ loại dữ liệu và nguồn dữ liệu.
