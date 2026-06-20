@@ -99,19 +99,36 @@
   .modal-info .tagline{color:var(--muted);margin-top:8px;font-size:15px}
   .block{margin-top:22px}
   .block h4{font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .block h4 .en{color:var(--accent-deep)}
   .block h4::before{content:"";width:14px;height:2px;background:var(--accent)}
   .block ul{list-style:none;display:flex;flex-direction:column;gap:7px}
   .block ul li{position:relative;padding-left:20px;font-size:14.5px;color:#2A3445}
   .block ul li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:2px;background:var(--accent)}
   .block p{font-size:14.5px;color:#2A3445}
-  .modal-foot{border-top:1px solid var(--line);padding:24px 32px;background:var(--bg)}
-  .ftable{width:100%;border-collapse:collapse;font-size:14px}
-  .ftable th{text-align:left;font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding:6px 12px 6px 0;font-weight:500}
-  .ftable td{padding:7px 12px 7px 0;border-top:1px solid var(--line);vertical-align:top}
-  .ftable td.who{font-weight:600;white-space:nowrap}
+  .modal-foot{border-top:1px solid var(--line);padding:26px 32px 30px;background:var(--bg)}
+  .sect+.sect{margin-top:28px}
+
+  /* OUR STORY */
+  .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+  @media(max-width:680px){.story-grid{grid-template-columns:1fr}}
+  .story-grid p{font-size:14.5px;color:#2A3445;line-height:1.7}
+  .story-img{border-radius:12px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/10;background:var(--ink-soft);position:relative}
+  .story-img img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+  .story-img .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:11px;color:#6B7689}
+
+  /* ABOUT US */
+  .group-photo{width:100%;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:16px;max-height:260px}
+  .group-photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+  .member{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+  .avatar{width:46px;height:46px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:18px;color:#06231a;background:var(--accent);overflow:hidden}
+  .avatar img{width:100%;height:100%;object-fit:cover}
+  .member .nm{font-weight:600;font-size:14.5px;line-height:1.25}
+  .member .rl{font-size:12.5px;color:var(--muted);margin-top:3px;line-height:1.4}
+
   .video-embed{aspect-ratio:16/9;width:100%;border-radius:12px;overflow:hidden;background:#000;border:1px solid var(--line)}
   .video-embed iframe{width:100%;height:100%;border:0}
-  .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+  .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
   .btn{font-family:var(--font-mono);font-size:13px;padding:10px 16px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;transition:.2s;cursor:pointer;border:1px solid var(--ink)}
   .btn.primary{background:var(--ink);color:#fff}
   .btn.primary:hover{background:var(--accent-deep);border-color:var(--accent-deep)}
@@ -134,9 +151,13 @@
 <body>
 
 <!-- ============================================================= -->
-<!--  Toàn bộ nội dung nằm ở mảng `projects` trong <script> gần cuối -->
-<!--  file. Ảnh snapshot tự chụp từ link demo; muốn thay ảnh tự       -->
-<!--  chụp thì điền đường dẫn vào `screenshots`. Không cần sửa phần CSS -->
+<!--  Mọi nội dung nằm ở mảng `projects` trong <script> gần cuối file. -->
+<!--  Các trường tùy chọn để thêm ẢNH (không bắt buộc):                -->
+<!--   • groupPhoto:"images/g01-team.jpg"  -> ảnh nhóm cho mục About Us -->
+<!--   • photo trong từng thành viên: {who:"...",did:"...",photo:"images/a.jpg"} -->
+<!--   • storyImage:"images/g01-best.png" -> ảnh đẹp nhất cho Our Story -->
+<!--   • screenshots:["images/...","..."] -> snapshot trên thẻ & popup  -->
+<!--  Không điền ảnh thì trang vẫn chạy (tự chụp màn hình / avatar chữ).-->
 <!-- ============================================================= -->
 
 <header>
@@ -167,14 +188,14 @@
   <div class="wrap">
     <p class="eyebrow">Chương trình Tiên tiến TCNH · Khóa 62 · FTU · Học phần NHA408E</p>
     <h1>Sản phẩm <span class="hl">Tài chính</span> do sinh viên xây dựng.</h1>
-    <p class="lede">Tổng hợp toàn bộ ứng dụng tài chính của các nhóm trong lớp — từ ý tưởng, tính năng đến sản phẩm chạy thật. Bấm vào từng sản phẩm để xem chi tiết, dùng thử và đóng góp của mỗi thành viên.</p>
+    <p class="lede">Tổng hợp toàn bộ ứng dụng tài chính của các nhóm trong lớp — từ ý tưởng, hành trình phát triển đến sản phẩm chạy thật. Bấm vào từng sản phẩm để xem chi tiết, dùng thử, hành trình và đội ngũ phía sau.</p>
     <div class="stats" id="stats"></div>
   </div>
 </section>
 
 <main class="wrap section" id="projects">
   <div class="section-head">
-    <div><h2>Tất cả sản phẩm</h2><p>Mỗi thẻ là một dự án của một nhóm. Bấm để mở chi tiết và dùng thử.</p></div>
+    <div><h2>Tất cả sản phẩm</h2><p>Mỗi thẻ là một dự án của một nhóm. Bấm để xem chi tiết, Our Story và About Us.</p></div>
     <div class="filters" id="filters"></div>
   </div>
   <div class="grid" id="grid"></div>
@@ -204,10 +225,14 @@
       </div>
     </div>
     <div class="modal-foot">
-      <div class="block" id="mVideoBlock" style="margin-top:0"><h4>Demo video</h4><div id="mVideo"></div></div>
-      <div class="block"><h4>Footprint — đóng góp thành viên</h4>
-        <table class="ftable"><thead><tr><th>Thành viên</th><th>Đóng góp chính</th></tr></thead><tbody id="mTeam"></tbody></table>
+      <div class="block sect"><h4>Our Story <span class="en">— Hành trình sản phẩm</span></h4>
+        <div class="story-grid"><p id="mStory"></p><div class="story-img" id="mStoryImg"></div></div>
       </div>
+      <div class="block sect"><h4>About Us <span class="en">— Thành viên &amp; vai trò</span></h4>
+        <div id="mGroupPhoto"></div>
+        <div class="team-grid" id="mTeam"></div>
+      </div>
+      <div class="block sect" id="mVideoBlock"><h4>Demo video</h4><div id="mVideo"></div></div>
       <div class="links" id="mLinks"></div>
     </div>
   </div>
@@ -232,215 +257,118 @@
 /* =================================================================
    ▼▼▼  CHỈ CẦN SỬA PHẦN NÀY  ▼▼▼
    ================================================================= */
-const CLASS_INFO = {
-  className: "FTU Legacy 62",
-  orgUrl:    "https://github.com/FTU-Legacy-62",
-};
+const CLASS_INFO = { className:"FTU Legacy 62", orgUrl:"https://github.com/FTU-Legacy-62" };
 
-/* embed:true  -> nhúng app chạy ngay trong popup (chỉ dùng cho web tĩnh, tải nhanh)
-   embed:false -> chỉ hiện ảnh snapshot + nút "Dùng thử"
-   screenshots: để [] thì trang tự chụp màn hình từ link demo. Muốn ảnh đẹp hơn:
-                bỏ ảnh vào thư mục images/ rồi điền ["images/g01-home.png","images/g01-final.png"]
-   video: dán link YouTube nếu nhóm có, "" nếu không.                                */
 const projects = [
   {
     group:"G01", name:"FinGuide",
     tagline:"Trắc nghiệm MBTI dẫn lối nghề nghiệp tài chính cho sinh viên.",
     tags:["Giáo dục","Hướng nghiệp"], embed:true,
     targetedUser:"Sinh viên năm nhất, năm hai quan tâm đến ngành Tài chính, đang phân vân chọn hướng đi và lộ trình học.",
-    features:[
-      "Trắc nghiệm MBTI 20 câu theo bối cảnh tài chính – kế toán",
-      "Bản đồ logic gắn 16 nhóm tính cách với nghề tài chính cụ thể",
-      "Lộ trình 4 năm kèm liên kết chứng chỉ ACCA, CFA, CMA",
-      "Hồ sơ nghề nghiệp chi tiết dạng accordion mở/đóng"],
+    features:["Trắc nghiệm MBTI 20 câu theo bối cảnh tài chính – kế toán","Bản đồ logic gắn 16 nhóm tính cách với nghề tài chính cụ thể","Lộ trình 4 năm kèm liên kết chứng chỉ ACCA, CFA, CMA","Hồ sơ nghề nghiệp chi tiết dạng accordion mở/đóng"],
     benefits:["Giúp sinh viên mới định hướng ngành tài chính rõ ràng hơn","Kết nối tính cách với lộ trình nghề và chứng chỉ phù hợp"],
-    video:"", repo:"https://github.com/FTU-Legacy-62/G01", live:"https://ftu-legacy-62.github.io/G01/",
-    screenshots:[],
-    team:[
-      {who:"Trịnh Minh Đức",did:"Lập trình viên & Trưởng nhóm"},
-      {who:"Nguyễn Hoàng Thu Thảo",did:"Nghiên cứu nghề nghiệp & đánh giá định tính"},
-      {who:"Nguyễn Anh Khoa",did:"Logic MBTI & hệ thống gợi ý"},
-      {who:"Lê Minh Đăng",did:"Logic MBTI & hệ thống gợi ý"}],
+    story:"Nhóm bắt đầu từ một quan sát quen thuộc: sinh viên năm nhất ngành Tài chính thường mơ hồ không biết mình hợp với nghề nào. Từ đó, FinGuide ra đời — biến bài trắc nghiệm MBTI thành một tấm bản đồ nghề nghiệp, nối tính cách của mỗi người với lộ trình học và chứng chỉ phù hợp, giúp các 'freshers' tự tin chọn hướng đi ngay từ những bước đầu.",
+    video:"", repo:"https://github.com/FTU-Legacy-62/G01", live:"https://ftu-legacy-62.github.io/G01/", screenshots:[],
+    team:[{who:"Trịnh Minh Đức",did:"Lập trình viên & Trưởng nhóm"},{who:"Nguyễn Hoàng Thu Thảo",did:"Nghiên cứu nghề nghiệp & đánh giá định tính"},{who:"Nguyễn Anh Khoa",did:"Logic MBTI & hệ thống gợi ý"},{who:"Lê Minh Đăng",did:"Logic MBTI & hệ thống gợi ý"}],
   },
   {
     group:"G02", name:"Pixiu Flow",
     tagline:"Quản lý thu chi, tồn kho và lợi nhuận cho chủ kinh doanh nhỏ.",
     tags:["Doanh nghiệp / SME"], embed:false,
     targetedUser:"Chủ shop nhỏ, người bán hàng online, freelancer và hộ kinh doanh cá thể tự quản lý tài chính, không có kế toán.",
-    features:[
-      "Ghi nhận doanh thu, nhập hàng và chi phí (một hoặc nhiều giao dịch)",
-      "Quản lý sản phẩm, danh mục và cảnh báo sắp hết tồn kho",
-      "Theo dõi công nợ: đã/chưa thanh toán, ngày đến hạn",
-      "Dashboard & báo cáo doanh thu – chi phí – lợi nhuận – dòng tiền"],
+    features:["Ghi nhận doanh thu, nhập hàng và chi phí (một hoặc nhiều giao dịch)","Quản lý sản phẩm, danh mục và cảnh báo sắp hết tồn kho","Theo dõi công nợ: đã/chưa thanh toán, ngày đến hạn","Dashboard & báo cáo doanh thu – chi phí – lợi nhuận – dòng tiền"],
     benefits:["Biết chính xác đang lời hay lỗ và lỗ ở đâu","Ra quyết định kinh doanh dựa trên số liệu thay vì cảm tính"],
-    video:"", repo:"https://github.com/FTU-Legacy-62/G02", live:"https://pixiuflow-production.up.railway.app/",
-    screenshots:[],
-    team:[
-      {who:"Nguyễn Thanh Ngân",did:"Nghiên cứu dữ liệu, người dùng & logic tài chính"},
-      {who:"Vũ Đức Anh",did:"Nghiên cứu người dùng & logic tài chính"},
-      {who:"Kiều Xuân Thuỷ",did:"UI/UX Designer"},
-      {who:"Nguyễn Bảo Ngọc",did:"UI/UX Designer"},
-      {who:"Đặng Như Ngọc Thạch",did:"Fullstack Developer"}],
+    story:"Xuất phát từ thực tế nhiều chủ shop nhỏ tin mình đang lời nhưng thực ra đang lỗ mà không biết lỗ ở đâu, nhóm xây Pixiu Flow để gói toàn bộ thu – chi – tồn kho – công nợ vào một hệ thống thống nhất. Mục tiêu là người không rành tài chính vẫn nhìn ra bức tranh kinh doanh thật của mình và quyết định dựa trên số liệu.",
+    video:"", repo:"https://github.com/FTU-Legacy-62/G02", live:"https://pixiuflow-production.up.railway.app/", screenshots:[],
+    team:[{who:"Nguyễn Thanh Ngân",did:"Nghiên cứu dữ liệu, người dùng & logic tài chính"},{who:"Vũ Đức Anh",did:"Nghiên cứu người dùng & logic tài chính"},{who:"Kiều Xuân Thuỷ",did:"UI/UX Designer"},{who:"Nguyễn Bảo Ngọc",did:"UI/UX Designer"},{who:"Đặng Như Ngọc Thạch",did:"Fullstack Developer"}],
   },
   {
     group:"G03", name:"Strive & Thrive",
     tagline:"Game mô phỏng 5 năm đầu sự nghiệp: cân bằng tiền bạc, sức khỏe, tinh thần.",
     tags:["Game mô phỏng"], embed:true,
     targetedUser:"Người trẻ và sinh viên muốn trải nghiệm các đánh đổi tài chính – cuộc sống trong môi trường an toàn trước khi gặp ngoài đời thật.",
-    features:[
-      "Mô phỏng 5 năm đầu sự nghiệp, mỗi vòng chơi là một năm",
-      "Quyết định công việc, thu nhập và chi tiêu mỗi năm",
-      "Hệ thống đầu tư và quản lý thu – chi",
-      "Theo dõi cùng lúc tài chính, sức khỏe thể chất và tinh thần"],
+    features:["Mô phỏng 5 năm đầu sự nghiệp, mỗi vòng chơi là một năm","Quyết định công việc, thu nhập và chi tiêu mỗi năm","Hệ thống đầu tư và quản lý thu – chi","Theo dõi cùng lúc tài chính, sức khỏe thể chất và tinh thần"],
     benefits:["Trải nghiệm đánh đổi tài chính – sức khỏe mà không tổn thất thật","Học cách cân bằng thay vì chỉ tối đa hóa tiền bạc"],
-    video:"", repo:"https://github.com/FTU-Legacy-62/G03", live:"https://epicdolphindape.github.io/Strive-Thrive-Game-src/",
-    screenshots:[],
-    team:[
-      {who:"Trần Phương Linh",did:"Content, Scenario & Game Feel · QA Lead"},
-      {who:"Nguyễn Khánh Linh",did:"Hệ thống thu nhập & chi tiêu"},
-      {who:"Đỗ Thảo Vy",did:"Hệ thống đầu tư"},
-      {who:"Lê Huyền Vy",did:"Thiết kế UI/UX"},
-      {who:"Trương Thùy Linh",did:"Kiến trúc hệ thống · Core flow · Tích hợp"}],
+    story:"Nhóm nhận ra người trẻ được khuyên 'hãy tiết kiệm, hãy đầu tư' nhưng hiếm khi được thử các đánh đổi đó trước khi gặp ngoài đời. Strive & Thrive mô phỏng 5 năm đầu sự nghiệp, nơi mỗi quyết định về tiền bạc đều tác động tới sức khỏe và tinh thần — để người chơi học cách cân bằng, chứ không chỉ giàu nhưng kiệt sức.",
+    video:"", repo:"https://github.com/FTU-Legacy-62/G03", live:"https://epicdolphindape.github.io/Strive-Thrive-Game-src/", screenshots:[],
+    team:[{who:"Trần Phương Linh",did:"Content, Scenario & Game Feel · QA Lead"},{who:"Nguyễn Khánh Linh",did:"Hệ thống thu nhập & chi tiêu"},{who:"Đỗ Thảo Vy",did:"Hệ thống đầu tư"},{who:"Lê Huyền Vy",did:"Thiết kế UI/UX"},{who:"Trương Thùy Linh",did:"Kiến trúc hệ thống · Core flow · Tích hợp"}],
   },
   {
     group:"G04", name:"Fun(d) Raising",
     tagline:"Game gọi vốn khởi nghiệp nhiều người chơi với 200 nhà đầu tư AI.",
     tags:["Game mô phỏng"], embed:false,
     targetedUser:"Sinh viên Tài chính – Kinh doanh, nhà sáng lập khởi nghiệp giai đoạn đầu, và giảng viên dạy gọi vốn / đầu tư mạo hiểm.",
-    features:[
-      "Mô phỏng gọi vốn nhiều người chơi (2–10) có người điều phối",
-      "Hệ sinh thái 200 nhà đầu tư AI với 4 tính cách khác nhau",
-      "Mỗi phase một sự kiện ngẫu nhiên, chơi bài để xoay xở chỉ số",
-      "Bộ bài chiến lược 22 lá và bảng xếp hạng điểm cuối game"],
+    features:["Mô phỏng gọi vốn nhiều người chơi (2–10) có người điều phối","Hệ sinh thái 200 nhà đầu tư AI với 4 tính cách khác nhau","Mỗi phase một sự kiện ngẫu nhiên, chơi bài để xoay xở chỉ số","Bộ bài chiến lược 22 lá và bảng xếp hạng điểm cuối game"],
     benefits:["Luyện chiến lược gọi vốn mà không rủi ro tài chính thật","Thấy ngay tác động của quyết định lên chỉ số và nhà đầu tư"],
-    video:"", repo:"https://github.com/FTU-Legacy-62/G04", live:"https://g04-sh5t.onrender.com/",
-    screenshots:[],
-    team:[
-      {who:"Nguyễn Ngọc Minh",did:"Cấu trúc database, hệ thống scenario, card engine, tester"},
-      {who:"Ngô Thị Diễm Phúc",did:"Chỉ số tài chính, cấu trúc input, điều phối luồng game, tester"},
-      {who:"Hà Bảo Khanh",did:"Hệ thống bot nhà đầu tư, quản lý reaction, tester"},
-      {who:"Kim Hye Jin",did:"Trưởng nhóm · Flask backend · API routing · quản lý phòng · tester"},
-      {who:"Vũ Bạch Dương",did:"Thiết kế UX/UI, frontend, tester"}],
+    story:"Sinh viên tài chính thường thuộc công thức định giá nhưng thiếu 'bản năng sống còn' khi gọi vốn thật. Nhóm tạo Fun(d) Raising — một sân chơi nhiều người, nơi 200 nhà đầu tư AI phản ứng với từng quyết định, để biến lý thuyết khô khan thành phản xạ chiến lược trong một môi trường không mất tiền thật.",
+    video:"", repo:"https://github.com/FTU-Legacy-62/G04", live:"https://g04-sh5t.onrender.com/", screenshots:[],
+    team:[{who:"Nguyễn Ngọc Minh",did:"Database, hệ thống scenario, card engine, tester"},{who:"Ngô Thị Diễm Phúc",did:"Chỉ số tài chính, cấu trúc input, điều phối luồng game, tester"},{who:"Hà Bảo Khanh",did:"Hệ thống bot nhà đầu tư, quản lý reaction, tester"},{who:"Kim Hye Jin",did:"Trưởng nhóm · Flask backend · API · quản lý phòng · tester"},{who:"Vũ Bạch Dương",did:"Thiết kế UX/UI, frontend, tester"}],
   },
   {
     group:"G05", name:"PortTrack",
     tagline:"Sàn mô phỏng đầu tư chứng khoán cho lớp học — vốn ảo, giá thật.",
     tags:["Đầu tư","Giáo dục"], embed:false,
     targetedUser:"Giảng viên dạy Quản trị danh mục đầu tư và sinh viên học đầu tư chứng khoán trong lớp học.",
-    features:[
-      "Giảng viên tạo phòng, cấp vốn ảo; sinh viên mua bán theo giá thị trường",
-      "Đăng nhập JWT, phân quyền, phòng công khai/riêng tư theo mã",
-      "Khớp lệnh theo phiên, thanh toán T+2, phí 0.15% và thuế 0.1%",
-      "Tự tính NAV, lãi/lỗ, lịch sử giao dịch; bảng xếp hạng cho giảng viên"],
+    features:["Giảng viên tạo phòng, cấp vốn ảo; sinh viên mua bán theo giá thị trường","Đăng nhập JWT, phân quyền, phòng công khai/riêng tư theo mã","Khớp lệnh theo phiên, thanh toán T+2, phí 0.15% và thuế 0.1%","Tự tính NAV, lãi/lỗ, lịch sử giao dịch; bảng xếp hạng cho giảng viên"],
     benefits:["Sinh viên thực hành quản lý danh mục không cần tiền thật","Giảng viên giám sát và chấm điểm minh bạch theo dữ liệu"],
-    video:"", repo:"https://github.com/FTU-Legacy-62/G05", live:"https://port-track-xi.vercel.app/",
-    screenshots:[],
-    team:[
-      {who:"Nguyen Anh Thu",did:"Trưởng nhóm & điều phối database"},
-      {who:"To Ha Vy",did:"Backend: xác thực, bảo mật, quản lý phòng, dữ liệu thị trường"},
-      {who:"Pham Quoc Thai",did:"Backend: giao dịch, quản lý danh mục, tích hợp giá cổ phiếu"},
-      {who:"Pham Linh Nhan",did:"Frontend: xác thực, dashboard, giám sát, điều hướng"},
-      {who:"Dang Ngoc Linh",did:"Frontend: phòng sinh viên, giao dịch, danh mục, lịch sử"}],
+    story:"Môn Quản trị danh mục cần thực hành đầu tư, nhưng giao dịch tiền thật thì rủi ro còn bảng tính thì khó giám sát. Nhóm dựng PortTrack để giảng viên mở phòng, cấp vốn ảo và theo dõi minh bạch, còn sinh viên mua bán theo giá thị trường thật — biến lớp học thành một sàn mô phỏng có kỷ luật.",
+    video:"", repo:"https://github.com/FTU-Legacy-62/G05", live:"https://port-track-xi.vercel.app/", screenshots:[],
+    team:[{who:"Nguyen Anh Thu",did:"Trưởng nhóm & điều phối database"},{who:"To Ha Vy",did:"Backend: xác thực, bảo mật, quản lý phòng, dữ liệu thị trường"},{who:"Pham Quoc Thai",did:"Backend: giao dịch, quản lý danh mục, tích hợp giá cổ phiếu"},{who:"Pham Linh Nhan",did:"Frontend: xác thực, dashboard, giám sát, điều hướng"},{who:"Dang Ngoc Linh",did:"Frontend: phòng sinh viên, giao dịch, danh mục, lịch sử"}],
   },
   {
     group:"G06", name:"PricePilot",
     tagline:"Mô phỏng tác động tăng giá bằng Monte Carlo cho doanh nghiệp cơ khí SME.",
     tags:["Doanh nghiệp / SME"], embed:false,
     targetedUser:"Doanh nghiệp vừa và nhỏ trong lĩnh vực gia công cơ khí, cần quyết định tăng giá bán có cơ sở.",
-    features:[
-      "Tính cost structure, base price và lợi nhuận hiện tại",
-      "Ước tính price elasticity từ dữ liệu giá – cầu trong quá khứ",
-      "Monte Carlo mô phỏng lợi nhuận, cầu và rủi ro ở nhiều mức giá",
-      "Đề xuất 3 chiến lược giá: Aggressive, Balanced, Conservative"],
+    features:["Tính cost structure, base price và lợi nhuận hiện tại","Ước tính price elasticity từ dữ liệu giá – cầu trong quá khứ","Monte Carlo mô phỏng lợi nhuận, cầu và rủi ro ở nhiều mức giá","Đề xuất 3 chiến lược giá: Aggressive, Balanced, Conservative"],
     benefits:["Lượng hóa rủi ro – lợi nhuận trước khi tăng giá","So sánh nhiều kịch bản giá trong điều kiện thị trường bất định"],
-    video:"", repo:"https://github.com/FTU-Legacy-62/G06", live:"https://pricepiloot.onrender.com/",
-    screenshots:[],
-    team:[
-      {who:"Đỗ Thị Quỳnh Anh",did:"Economic Logic & Pricing Model"},
-      {who:"Trần Hà Dương",did:"Data & Input"},
-      {who:"Nguyễn Mai Anh",did:"Monte Carlo Simulation"},
-      {who:"Đàm Ngọc Hà Phương",did:"Advisory Logic & Strategy Engine"},
-      {who:"Nông Đức Minh",did:"Web & Result Display"}],
+    story:"Các doanh nghiệp cơ khí nhỏ thường quyết định tăng giá bằng cảm tính và trả giá bằng đơn hàng mất đi. Nhóm xây PricePilot để lượng hóa nỗi lo đó: dùng độ co giãn giá và mô phỏng Monte Carlo, sản phẩm cho thấy mỗi mức tăng giá ảnh hưởng tới lợi nhuận và rủi ro ra sao, kèm ba chiến lược để doanh nghiệp lựa chọn.",
+    video:"", repo:"https://github.com/FTU-Legacy-62/G06", live:"https://pricepiloot.onrender.com/", screenshots:[],
+    team:[{who:"Đỗ Thị Quỳnh Anh",did:"Economic Logic & Pricing Model"},{who:"Trần Hà Dương",did:"Data & Input"},{who:"Nguyễn Mai Anh",did:"Monte Carlo Simulation"},{who:"Đàm Ngọc Hà Phương",did:"Advisory Logic & Strategy Engine"},{who:"Nông Đức Minh",did:"Web & Result Display"}],
   },
   {
     group:"G07", name:"FOMOPOLY",
     tagline:"Game đầu tư phơi bày thiên kiến hành vi qua 8 vòng quyết định.",
     tags:["Game mô phỏng","Đầu tư"], embed:false,
     targetedUser:"Sinh viên đại học, đặc biệt năm 1–2 các ngành tài chính, ngân hàng, kinh tế, kinh doanh.",
-    features:[
-      "Đầu tư cổ phiếu giả lập STEELSTOX với tài khoản ảo 100.000 USD",
-      "8 vòng scenario thị trường, thứ tự ngẫu nhiên mỗi lượt",
-      "Quyết định Buy / Sell / Hold kèm câu hỏi xác nhận",
-      "Phân tích thiên kiến hành vi và dashboard điểm số cuối game"],
+    features:["Đầu tư cổ phiếu giả lập STEELSTOX với tài khoản ảo 100.000 USD","8 vòng scenario thị trường, thứ tự ngẫu nhiên mỗi lượt","Quyết định Buy / Sell / Hold kèm câu hỏi xác nhận","Phân tích thiên kiến hành vi và dashboard điểm số cuối game"],
     benefits:["Hiểu đầu tư không chỉ là tính lãi mà còn kiểm soát hành vi","Nhận diện thiên kiến của bản thân qua điểm số và feedback"],
-    video:"", repo:"https://github.com/FTU-Legacy-62/G07", live:"https://g07-fomopoly.streamlit.app/",
-    screenshots:[],
-    team:[
-      {who:"Vương Huy Hoàng",did:"Trưởng nhóm · App backbone · quản lý dữ liệu · logic test"},
-      {who:"Đào Minh Quang",did:"Chuẩn bị dữ liệu & thiết kế scenario"},
-      {who:"Nguyễn Hoàng Thiều Trang",did:"Thiết kế luật giao dịch, logic test"},
-      {who:"Trần Trung Hiếu",did:"Luật nhận diện bias & luật chấm điểm"},
-      {who:"Nguyễn Hạnh Trang",did:"Thiết kế UI"}],
+    story:"Nhóm muốn trả lời câu hỏi: vì sao cùng một tin thị trường, mỗi người lại ra quyết định khác nhau? FOMOPOLY cho người chơi đầu tư bằng tài khoản ảo qua 8 vòng, rồi soi lại không chỉ lãi/lỗ mà cả những thiên kiến hành vi đứng sau mỗi lựa chọn — để hiểu đầu tư cũng là chuyện kiểm soát cảm xúc.",
+    video:"", repo:"https://github.com/FTU-Legacy-62/G07", live:"https://g07-fomopoly.streamlit.app/", screenshots:[],
+    team:[{who:"Vương Huy Hoàng",did:"Trưởng nhóm · App backbone · quản lý dữ liệu · logic test"},{who:"Đào Minh Quang",did:"Chuẩn bị dữ liệu & thiết kế scenario"},{who:"Nguyễn Hoàng Thiều Trang",did:"Thiết kế luật giao dịch, logic test"},{who:"Trần Trung Hiếu",did:"Luật nhận diện bias & luật chấm điểm"},{who:"Nguyễn Hạnh Trang",did:"Thiết kế UI"}],
   },
   {
     group:"G08", name:"FREE FALL",
     tagline:"Web game ra quyết định danh mục giữa một cuộc khủng hoảng tài chính.",
     tags:["Game mô phỏng"], embed:true,
     targetedUser:"Sinh viên tài chính – đầu tư – fintech, giảng viên cần case tương tác, và nhà đầu tư mới.",
-    features:[
-      "Mô phỏng khủng hoảng tài chính qua 6 phase diễn biến dần",
-      "Nhiều nguồn tin: News, Gmail, Chat, Social và Files",
-      "Dùng Research Budget hữu hạn để mở tài liệu chuyên sâu",
-      "Result page và reveal case page tiết lộ khủng hoảng thật phía sau"],
+    features:["Mô phỏng khủng hoảng tài chính qua 6 phase diễn biến dần","Nhiều nguồn tin: News, Gmail, Chat, Social và Files","Dùng Research Budget hữu hạn để mở tài liệu chuyên sâu","Result page và reveal case page tiết lộ khủng hoảng thật phía sau"],
     benefits:["Cảm nhận áp lực ra quyết định khi thông tin còn nhiễu","Học quản trị rủi ro qua trải nghiệm thay vì chỉ đọc lại sự kiện"],
-    video:"", repo:"https://github.com/FTU-Legacy-62/G08", live:"https://financialcrisisftu.netlify.app/",
-    screenshots:[],
-    team:[
-      {who:"Lê Khánh Linh",did:"Project Lead · UX/UI & tích hợp sản phẩm"},
-      {who:"Nguyễn Châu Anh",did:"Gameplay flow & trải nghiệm người chơi"},
-      {who:"Vũ Lam Duy",did:"Dữ liệu scenario & nội dung case"},
-      {who:"Hoàng Bảo Như",did:"Logic quyết định & hệ thống chấm điểm"},
-      {who:"Nguyễn Quang Kiệt",did:"Lập trình, tích hợp & kiểm thử"}],
+    story:"Khủng hoảng tài chính thường được học theo kiểu đọc lại khi mọi chuyện đã rõ. Nhóm làm FREE FALL để đặt người chơi vào chính khoảnh khắc bất định đó — lọc tin thật giữa tin nhiễu, phân bổ ngân sách nghiên cứu hữu hạn và ra quyết định danh mục, trước khi case thật được hé lộ ở cuối.",
+    video:"", repo:"https://github.com/FTU-Legacy-62/G08", live:"https://financialcrisisftu.netlify.app/", screenshots:[],
+    team:[{who:"Lê Khánh Linh",did:"Project Lead · UX/UI & tích hợp sản phẩm"},{who:"Nguyễn Châu Anh",did:"Gameplay flow & trải nghiệm người chơi"},{who:"Vũ Lam Duy",did:"Dữ liệu scenario & nội dung case"},{who:"Hoàng Bảo Như",did:"Logic quyết định & hệ thống chấm điểm"},{who:"Nguyễn Quang Kiệt",did:"Lập trình, tích hợp & kiểm thử"}],
   },
   {
     group:"G09", name:"FinFolio",
     tagline:"Phân tích và tối ưu danh mục đầu tư cá nhân bằng các chỉ số chuyên sâu.",
     tags:["Đầu tư","Phân tích"], embed:false,
     targetedUser:"Cá nhân theo dõi danh mục, sinh viên tài chính và nhà đầu tư mới đến trung cấp.",
-    features:[
-      "Nhập danh mục (mã, số lượng, benchmark, thời gian), tự tính tỷ trọng",
-      "Dashboard CAGR, Volatility, Sharpe, Sortino, Max Drawdown, VaR/CVaR, Beta, Alpha…",
-      "So sánh benchmark, bảng tài sản và ma trận tương quan",
-      "Mô phỏng thêm mã và tối ưu tỷ trọng (max Sharpe / min Volatility)"],
+    features:["Nhập danh mục (mã, số lượng, benchmark, thời gian), tự tính tỷ trọng","Dashboard CAGR, Volatility, Sharpe, Sortino, Max Drawdown, VaR/CVaR, Beta, Alpha…","So sánh benchmark, bảng tài sản và ma trận tương quan","Mô phỏng thêm mã và tối ưu tỷ trọng (max Sharpe / min Volatility)"],
     benefits:["Đánh giá chất lượng cả danh mục, không chỉ từng mã","Tự động hóa các phép tính rủi ro – lợi nhuận phức tạp"],
-    video:"", repo:"https://github.com/FTU-Legacy-62/G09", live:"https://finfolio-axub.onrender.com/",
-    screenshots:[],
-    team:[
-      {who:"Phạm Minh Phương",did:"Lập kế hoạch sản phẩm & thiết kế luồng nhập dữ liệu"},
-      {who:"Hoàng Minh Ngọc",did:"Logic tài chính & tính toán backend"},
-      {who:"Nguyễn Trịnh Thái Hưng",did:"Thiết kế UI/UX & trực quan hóa dashboard"},
-      {who:"Nghiêm An Thái",did:"Xây dựng các trang chính phía frontend"},
-      {who:"Bùi Thanh Hải",did:"Tích hợp backend/frontend, biểu đồ, mô phỏng"}],
+    story:"Nhà đầu tư cá nhân hay nhìn từng mã tăng giảm mà bỏ quên chất lượng của cả danh mục. Nhóm xây FinFolio để gom mọi phép tính rủi ro – lợi nhuận phức tạp (Sharpe, Drawdown, tương quan, so benchmark) vào một dashboard, và còn cho thử 'what-if' khi thêm một mã mới trước khi xuống tiền thật.",
+    video:"", repo:"https://github.com/FTU-Legacy-62/G09", live:"https://finfolio-axub.onrender.com/", screenshots:[],
+    team:[{who:"Phạm Minh Phương",did:"Lập kế hoạch sản phẩm & thiết kế luồng nhập dữ liệu"},{who:"Hoàng Minh Ngọc",did:"Logic tài chính & tính toán backend"},{who:"Nguyễn Trịnh Thái Hưng",did:"Thiết kế UI/UX & trực quan hóa dashboard"},{who:"Nghiêm An Thái",did:"Xây dựng các trang chính phía frontend"},{who:"Bùi Thanh Hải",did:"Tích hợp backend/frontend, biểu đồ, mô phỏng"}],
   },
   {
     group:"G10", name:"Financial Analyzer",
     tagline:"Nền tảng phân tích tài chính & so sánh khoản vay ngân hàng cho SME.",
     tags:["Doanh nghiệp / SME","Phân tích"], embed:false,
     targetedUser:"Chủ doanh nghiệp và nhân sự tài chính tại các SME, cùng hộ kinh doanh tại Việt Nam.",
-    features:[
-      "Đánh giá rủi ro nhanh & sâu với 8 chỉ số và radar 7 chiều",
-      "So sánh gói vay ngân hàng theo 8 tiêu chí kèm chấm điểm",
-      "Phân tích đầu tư NPV/IRR cùng sensitivity và kịch bản",
-      "DuPont, dashboard trực quan, cố vấn AI và xuất báo cáo PDF"],
+    features:["Đánh giá rủi ro nhanh & sâu với 8 chỉ số và radar 7 chiều","So sánh gói vay ngân hàng theo 8 tiêu chí kèm chấm điểm","Phân tích đầu tư NPV/IRR cùng sensitivity và kịch bản","DuPont, dashboard trực quan, cố vấn AI và xuất báo cáo PDF"],
     benefits:["Tự đánh giá sức khỏe tài chính trước khi vay","So sánh gói vay và phân tích đầu tư trên cùng một nền tảng"],
-    video:"", repo:"https://github.com/FTU-Legacy-62/G10", live:"https://g10-bjcd.onrender.com",
-    screenshots:[],
-    team:[
-      {who:"Đạt",did:"Backend API, database, deploy, risk scoring, DeepSeek AI"},
-      {who:"Huy",did:"BaseScraper engine, BIDV scraper, database"},
-      {who:"Tuấn",did:"UI/UX, financial engine, dashboard, AI consultant"},
-      {who:"Phước",did:"Web scraper VPBank + Vietcombank"},
-      {who:"Quang",did:"Web scraper MBBank + Techcombank, tích hợp scraper"}],
+    story:"Hơn 90% doanh nghiệp Việt Nam là SME, nhưng họ khó tự đánh giá sức khỏe tài chính và so sánh các gói vay rải rác. Nhóm xây Financial Analyzer để tính các chỉ số, chấm điểm rủi ro, xếp hạng khoản vay theo 8 tiêu chí và thêm cố vấn AI — giúp chủ doanh nghiệp vay vốn bằng dữ liệu thay vì phỏng đoán.",
+    video:"", repo:"https://github.com/FTU-Legacy-62/G10", live:"https://g10-bjcd.onrender.com", screenshots:[],
+    team:[{who:"Đạt",did:"Backend API, database, deploy, risk scoring, DeepSeek AI"},{who:"Huy",did:"BaseScraper engine, BIDV scraper, database"},{who:"Tuấn",did:"UI/UX, financial engine, dashboard, AI consultant"},{who:"Phước",did:"Web scraper VPBank + Vietcombank"},{who:"Quang",did:"Web scraper MBBank + Techcombank, tích hợp scraper"}],
   },
 ];
 /* =================================================================
@@ -454,15 +382,11 @@ const fo=document.getElementById('footOrg'); fo.href=CLASS_INFO.orgUrl; fo.textC
 document.getElementById('footYear').textContent='© '+new Date().getFullYear()+' '+CLASS_INFO.className;
 
 const memberCount=projects.reduce((n,p)=>n+(p.team?p.team.length:0),0);
-const stat=[
-  {num:projects.length,lbl:"Nhóm"},
-  {num:projects.length,lbl:"Sản phẩm"},
-  {num:memberCount,lbl:"Thành viên"},
-  {num:new Set(projects.flatMap(p=>p.tags||[])).size,lbl:"Lĩnh vực"}];
+const stat=[{num:projects.length,lbl:"Nhóm"},{num:projects.length,lbl:"Sản phẩm"},{num:memberCount,lbl:"Thành viên"},{num:new Set(projects.flatMap(p=>p.tags||[])).size,lbl:"Lĩnh vực"}];
 document.getElementById('stats').innerHTML=stat.map(s=>`<div class="stat"><div class="num">${s.num}</div><div class="lbl">${s.lbl}</div></div>`).join('');
 
 const esc=s=>(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const initial=n=>(n||'?').trim().charAt(0).toUpperCase();
+const initial=n=>(n||'?').trim().split(/\s+/).pop().charAt(0).toUpperCase();
 const shot=u=>u?'https://s.wordpress.com/mshots/v1/'+encodeURIComponent(u)+'?w=1280&h=800':'';
 const snapSrc=p=>(p.screenshots&&p.screenshots[0])?p.screenshots[0]:shot(p.live);
 function ytEmbed(url){if(!url)return null;let id=null;const m1=url.match(/[?&]v=([^&]+)/),m2=url.match(/youtu\.be\/([^?]+)/),m3=url.match(/embed\/([^?]+)/);if(m1)id=m1[1];else if(m2)id=m2[1];else if(m3)id=m3[1];return id?`https://www.youtube.com/embed/${id}`:null;}
@@ -479,8 +403,7 @@ function renderFilters(){
 const gridEl=document.getElementById('grid'),emptyEl=document.getElementById('empty');
 function thumbHTML(p){
   const s=snapSrc(p);
-  if(s) return `<img src="${esc(s)}" alt="Ảnh ${esc(p.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                <div class="thumb-ph" style="display:none"><div class="init">${initial(p.name)}</div><div class="tag">SNAPSHOT</div></div>`;
+  if(s) return `<img src="${esc(s)}" alt="Ảnh ${esc(p.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="thumb-ph" style="display:none"><div class="init">${initial(p.name)}</div><div class="tag">SNAPSHOT</div></div>`;
   return `<div class="thumb-ph"><div class="init">${initial(p.name)}</div><div class="tag">SNAPSHOT</div></div>`;
 }
 function renderGrid(){
@@ -489,41 +412,47 @@ function renderGrid(){
   gridEl.innerHTML=list.map(p=>{const i=projects.indexOf(p);return `
     <article class="card" tabindex="0" role="button" data-i="${i}" aria-label="Xem chi tiết ${esc(p.name)}">
       <div class="thumb"><span class="gcode">${esc(p.group)}</span>${thumbHTML(p)}</div>
-      <div class="card-body">
-        <h3 class="card-name">${esc(p.name)}</h3>
-        <p class="card-tag">${esc(p.tagline)}</p>
+      <div class="card-body"><h3 class="card-name">${esc(p.name)}</h3><p class="card-tag">${esc(p.tagline)}</p>
         <div class="card-chips">${(p.tags||[]).map(t=>`<span class="mini">${esc(t)}</span>`).join('')}</div>
-        <span class="card-more">Xem chi tiết <span class="arrow">→</span></span>
-      </div>
+        <span class="card-more">Xem chi tiết <span class="arrow">→</span></span></div>
     </article>`;}).join('');
   gridEl.querySelectorAll('.card').forEach(c=>{c.onclick=()=>openModal(+c.dataset.i);c.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openModal(+c.dataset.i);}};});
 }
 
 const overlay=document.getElementById('overlay');let lastFocus=null;
+function avatar(t){
+  if(t.photo) return `<span class="avatar"><img src="${esc(t.photo)}" alt="${esc(t.who)}" onerror="this.parentNode.textContent='${esc(initial(t.who))}'"></span>`;
+  return `<span class="avatar">${esc(initial(t.who))}</span>`;
+}
 function openModal(i){
   const p=projects[i];if(!p)return;lastFocus=document.activeElement;
   document.getElementById('mGroup').textContent=p.group+' · Sản phẩm';
   document.getElementById('mTitle').textContent=p.name;
   document.getElementById('mTagline').textContent=p.tagline;
-  // media
   let media='';
   if(p.embed&&p.live){
     media=`<span class="media-label">XEM TRỰC TIẾP</span><div class="frame-wrap"><iframe src="${esc(p.live)}" title="${esc(p.name)}" loading="lazy"></iframe></div><a class="media-open" href="${esc(p.live)}" target="_blank" rel="noopener">Mở toàn màn hình ↗</a>`;
   }else{
     const s=snapSrc(p);
-    media=`<span class="media-label">SNAPSHOT</span>`+
-      (s?`<img src="${esc(s)}" alt="${esc(p.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="shot-ph" style="display:none">Đang tạo ảnh — tải lại trang nếu chưa hiện</div>`:`<div class="shot-ph">Chưa có ảnh</div>`)+
-      (p.live?`<a class="media-open" href="${esc(p.live)}" target="_blank" rel="noopener">Dùng thử app ↗</a>`:'');
+    media=`<span class="media-label">SNAPSHOT</span>`+(s?`<img src="${esc(s)}" alt="${esc(p.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="shot-ph" style="display:none">Đang tạo ảnh — tải lại trang nếu chưa hiện</div>`:`<div class="shot-ph">Chưa có ảnh</div>`)+(p.live?`<a class="media-open" href="${esc(p.live)}" target="_blank" rel="noopener">Dùng thử app ↗</a>`:'');
   }
   document.getElementById('mMedia').innerHTML=media;
   document.getElementById('mUser').textContent=p.targetedUser||'—';
   document.getElementById('mFeatures').innerHTML=(p.features||[]).map(f=>`<li>${esc(f)}</li>`).join('')||'<li>—</li>';
   document.getElementById('mBenefits').innerHTML=(p.benefits||[]).map(b=>`<li>${esc(b)}</li>`).join('')||'<li>—</li>';
+  // Our Story
+  document.getElementById('mStory').textContent=p.story||'—';
+  const si=p.storyImage||snapSrc(p);
+  document.getElementById('mStoryImg').innerHTML=si?`<img src="${esc(si)}" alt="Ảnh ${esc(p.name)}" loading="lazy" onerror="this.style.display='none';this.parentNode.insertAdjacentHTML('beforeend','<div class=ph>Ảnh đẹp nhất của sản phẩm</div>')">`:`<div class="ph">Ảnh đẹp nhất của sản phẩm</div>`;
+  // About Us
+  document.getElementById('mGroupPhoto').innerHTML=p.groupPhoto?`<div class="group-photo"><img src="${esc(p.groupPhoto)}" alt="Ảnh nhóm ${esc(p.group)}" loading="lazy" onerror="this.parentNode.style.display='none'"></div>`:'';
+  document.getElementById('mTeam').innerHTML=(p.team||[]).map(t=>`<div class="member">${avatar(t)}<div><div class="nm">${esc(t.who)}</div><div class="rl">${esc(t.did)}</div></div></div>`).join('');
+  // video
   const vb=document.getElementById('mVideoBlock'),emb=ytEmbed(p.video);
   if(emb){vb.style.display='';document.getElementById('mVideo').innerHTML=`<div class="video-embed"><iframe src="${emb}" allowfullscreen loading="lazy"></iframe></div>`;}
   else if(p.video){vb.style.display='';document.getElementById('mVideo').innerHTML=`<a class="btn ghost" href="${esc(p.video)}" target="_blank" rel="noopener">▶ Xem video demo ↗</a>`;}
   else vb.style.display='none';
-  document.getElementById('mTeam').innerHTML=(p.team||[]).map(t=>`<tr><td class="who">${esc(t.who)}</td><td>${esc(t.did)}</td></tr>`).join('')||'<tr><td colspan="2">—</td></tr>';
+  // links
   let l='';
   if(p.live)l+=`<a class="btn primary" href="${esc(p.live)}" target="_blank" rel="noopener">▶ Dùng thử app ↗</a>`;
   if(p.repo)l+=`<a class="btn ghost" href="${esc(p.repo)}" target="_blank" rel="noopener">⌥ Mã nguồn GitHub ↗</a>`;
