@@ -75,6 +75,11 @@
   .chip{font-family:var(--font-mono);font-size:12px;padding:7px 13px;border:1px solid var(--line);background:var(--surface);border-radius:99px;color:var(--muted);cursor:pointer;transition:.18s}
   .chip:hover{border-color:var(--ink)}
   .chip.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .catalog-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:-12px 0 24px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:rgba(252,253,252,.72)}
+  .catalog-count{font-family:var(--font-display);font-size:16px;font-weight:600;color:var(--ink)}
+  .catalog-count span{color:var(--accent-deep)}
+  .catalog-current{font-family:var(--font-mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.055em}
+  .catalog-current strong{color:var(--accent-deep);font-weight:600}
 
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
@@ -91,9 +96,12 @@
   .thumb-ph .init{font-family:var(--font-display);font-weight:700;font-size:42px;color:var(--accent)}
   .thumb-ph .tag{font-family:var(--font-mono);font-size:11px;color:#89AA9D;letter-spacing:.1em}
   .gcode{position:absolute;top:10px;left:10px;z-index:2;font-family:var(--font-mono);font-size:11px;background:rgba(8,61,49,.78);color:#fff;padding:4px 9px;border-radius:6px;letter-spacing:.06em}
+  .live-badge{position:absolute;top:10px;right:10px;z-index:2;font-family:var(--font-mono);font-size:10px;background:rgba(252,253,252,.92);color:var(--accent-deep);border:1px solid rgba(220,232,226,.9);padding:4px 8px;border-radius:999px;letter-spacing:.04em}
   .card-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:9px;flex:1}
+  .card-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;font-family:var(--font-mono);font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.045em}
+  .card-meta strong{color:var(--accent-deep);font-weight:600}
   .card-name{font-family:var(--font-display);font-weight:600;font-size:19px;letter-spacing:-.01em}
-  .card-tag{color:var(--muted);font-size:14px;flex:1}
+  .card-tag{color:var(--muted);font-size:14px;flex:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
   .card-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px}
   .mini{font-family:var(--font-mono);font-size:10.5px;padding:4px 9px;border-radius:6px;background:var(--bg);color:var(--muted);border:1px solid var(--line)}
   .card-actions{display:flex;gap:8px;margin-top:9px}
@@ -121,6 +129,8 @@
   .modal-info .grp{font-family:var(--font-mono);font-size:12px;color:var(--accent-deep);text-transform:uppercase;letter-spacing:.05em}
   .modal-info h3{font-family:var(--font-display);font-weight:700;font-size:28px;letter-spacing:-.02em;margin-top:6px}
   .modal-info .tagline{color:var(--muted);margin-top:8px;font-size:15px}
+  .modal-meta{display:flex;gap:7px;flex-wrap:wrap;margin-top:16px}
+  .meta-pill{font-family:var(--font-mono);font-size:10.5px;color:var(--accent-deep);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:5px 9px}
   .modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
   .modal-actions .btn{min-height:42px}
   .block{margin-top:22px}
@@ -208,6 +218,8 @@
     .filters{margin:20px -20px 0;padding:0 20px 5px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;overscroll-behavior-inline:contain}
     .filters::-webkit-scrollbar{display:none}
     .chip{flex:none;min-height:36px;padding:8px 13px}
+    .catalog-bar{display:block;margin:-8px 0 20px;padding:13px 14px}
+    .catalog-current{margin-top:4px}
     .grid{gap:18px}
     .card-body{padding:17px 18px 19px}
     .card-actions{gap:7px}
@@ -285,6 +297,10 @@
     <div><h2>Tất cả sản phẩm</h2><p>Mỗi thẻ là một dự án của một nhóm. Bấm để xem chi tiết, Our Story và About Us.</p></div>
     <div class="filters" id="filters"></div>
   </div>
+  <div class="catalog-bar" aria-live="polite">
+    <div class="catalog-count" id="catalogCount"></div>
+    <div class="catalog-current" id="catalogCurrent"></div>
+  </div>
   <div class="grid" id="grid"></div>
   <div class="empty" id="empty">Chưa có sản phẩm nào khớp bộ lọc.</div>
 </main>
@@ -306,6 +322,7 @@
         <div class="grp" id="mGroup"></div>
         <h3 id="mTitle"></h3>
         <p class="tagline" id="mTagline"></p>
+        <div class="modal-meta" id="mMeta"></div>
         <div class="modal-actions" id="mQuickLinks"></div>
         <div class="block"><h4>Đối tượng người dùng</h4><p id="mUser"></p></div>
         <div class="block"><h4>Tính năng chính</h4><ul id="mFeatures"></ul></div>
@@ -493,7 +510,7 @@ function renderFilters(){
   filtersEl.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{activeTag=b.dataset.tag;renderFilters();renderGrid();});
 }
 
-const gridEl=document.getElementById('grid'),emptyEl=document.getElementById('empty');
+const gridEl=document.getElementById('grid'),emptyEl=document.getElementById('empty'),catalogCountEl=document.getElementById('catalogCount'),catalogCurrentEl=document.getElementById('catalogCurrent');
 function thumbHTML(p){
   const s=snapSrc(p);
   if(s) return `<img src="${esc(s)}" alt="Ảnh ${esc(p.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="thumb-ph" style="display:none"><div class="init">${initial(p.name)}</div><div class="tag">SNAPSHOT</div></div>`;
@@ -502,13 +519,15 @@ function thumbHTML(p){
 function renderGrid(){
   const list=projects.filter(p=>activeTag==='all'||(p.tags||[]).includes(activeTag));
   emptyEl.style.display=list.length?'none':'block';
+  catalogCountEl.innerHTML=`Đang hiển thị <span>${list.length}</span>/${projects.length} sản phẩm`;
+  catalogCurrentEl.innerHTML=`Bộ lọc: <strong>${esc(activeTag==='all'?'Tất cả lĩnh vực':activeTag)}</strong>`;
   gridEl.innerHTML=list.map(p=>{const i=projects.indexOf(p);const actions=[
       p.live?`<a class="card-action primary" href="${esc(p.live)}" target="_blank" rel="noopener" aria-label="Dùng thử ${esc(p.name)}">Dùng thử ↗</a>`:'',
       `<button class="card-action ghost" type="button" data-open="${i}">Chi tiết</button>`
     ].join('');return `
     <article class="card" tabindex="0" role="button" data-i="${i}" aria-label="Xem chi tiết ${esc(p.name)}">
-      <div class="thumb"><span class="gcode">${esc(p.group)}</span>${thumbHTML(p)}</div>
-      <div class="card-body"><h3 class="card-name">${esc(p.name)}</h3><p class="card-tag">${esc(p.tagline)}</p>
+      <div class="thumb"><span class="gcode">${esc(p.group)}</span>${p.live?'<span class="live-badge">Demo online</span>':''}${thumbHTML(p)}</div>
+      <div class="card-body"><div class="card-meta"><strong>${esc(p.group)}</strong><span>${(p.team||[]).length} thành viên</span></div><h3 class="card-name">${esc(p.name)}</h3><p class="card-tag">${esc(p.tagline)}</p>
         <div class="card-chips">${(p.tags||[]).map(t=>`<span class="mini">${esc(t)}</span>`).join('')}</div>
         <div class="card-actions">${actions}</div></div>
     </article>`;}).join('');
@@ -526,6 +545,8 @@ function openModal(i){
   document.getElementById('mGroup').textContent=p.group+' · Sản phẩm';
   document.getElementById('mTitle').textContent=p.name;
   document.getElementById('mTagline').textContent=p.tagline;
+  const meta=[p.group,`${(p.team||[]).length} thành viên`].concat(p.tags||[]).concat(p.live?['Demo online']:[]);
+  document.getElementById('mMeta').innerHTML=meta.map(x=>`<span class="meta-pill">${esc(x)}</span>`).join('');
   let q='';
   if(p.live)q+=`<a class="btn primary" href="${esc(p.live)}" target="_blank" rel="noopener">▶ Dùng thử app ↗</a>`;
   if(p.repo)q+=`<a class="btn ghost" href="${esc(p.repo)}" target="_blank" rel="noopener">Mã nguồn GitHub ↗</a>`;
