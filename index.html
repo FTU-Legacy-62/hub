@@ -149,7 +149,7 @@
   .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
   @media(max-width:680px){.story-grid{grid-template-columns:1fr}}
   .story-grid p{font-size:14.5px;color:#23443A;line-height:1.7}
-  .story-img{border-radius:12px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/10;background:var(--ink-soft);position:relative}
+  .story-img{border-radius:12px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/9;background:var(--ink-soft);position:relative}
   .story-img img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
   .story-img .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:11px;color:#89AA9D}
 
@@ -410,7 +410,7 @@ const projects = [
     features:["Trắc nghiệm MBTI 20 câu theo bối cảnh tài chính – kế toán","Bản đồ logic gắn 16 nhóm tính cách với nghề tài chính cụ thể","Lộ trình 4 năm kèm liên kết chứng chỉ ACCA, CFA, CMA","Hồ sơ nghề nghiệp chi tiết dạng accordion mở/đóng"],
     benefits:["Giúp sinh viên mới định hướng ngành tài chính rõ ràng hơn","Kết nối tính cách với lộ trình nghề và chứng chỉ phù hợp"],
     story:"Nhóm bắt đầu từ một quan sát quen thuộc: sinh viên năm nhất ngành Tài chính thường mơ hồ không biết mình hợp với nghề nào. Từ đó, FinGuide ra đời — biến bài trắc nghiệm MBTI thành một tấm bản đồ nghề nghiệp, nối tính cách của mỗi người với lộ trình học và chứng chỉ phù hợp, giúp các 'freshers' tự tin chọn hướng đi ngay từ những bước đầu.",
-    video:"", repo:"https://github.com/FTU-Legacy-62/G01", live:"https://ftu-legacy-62.github.io/G01/", screenshots:["images/g01.png"], storyImage:"images/g01.png",
+    video:"", repo:"https://github.com/FTU-Legacy-62/G01", live:"https://ftu-legacy-62.github.io/G01/", screenshots:["images/g01.png"], storyImage:"images/g01-story.png",
     team:[{who:"Trịnh Minh Đức",did:"Lập trình viên & Trưởng nhóm"},{who:"Nguyễn Hoàng Thu Thảo",did:"Nghiên cứu nghề nghiệp & đánh giá định tính"},{who:"Nguyễn Anh Khoa",did:"Logic MBTI & hệ thống gợi ý"},{who:"Lê Minh Đăng",did:"Logic MBTI & hệ thống gợi ý"}],
   },
   {
@@ -421,7 +421,7 @@ const projects = [
     features:["Ghi nhận doanh thu, nhập hàng và chi phí (một hoặc nhiều giao dịch)","Quản lý sản phẩm, danh mục và cảnh báo sắp hết tồn kho","Theo dõi công nợ: đã/chưa thanh toán, ngày đến hạn","Dashboard & báo cáo doanh thu – chi phí – lợi nhuận – dòng tiền"],
     benefits:["Biết chính xác đang lời hay lỗ và lỗ ở đâu","Ra quyết định kinh doanh dựa trên số liệu thay vì cảm tính"],
     story:"Xuất phát từ thực tế nhiều chủ shop nhỏ tin mình đang lời nhưng thực ra đang lỗ mà không biết lỗ ở đâu, nhóm xây Pixiu Flow để gói toàn bộ thu – chi – tồn kho – công nợ vào một hệ thống thống nhất. Mục tiêu là người không rành tài chính vẫn nhìn ra bức tranh kinh doanh thật của mình và quyết định dựa trên số liệu.",
-    video:"", repo:"https://github.com/FTU-Legacy-62/G02", live:"https://pixiuflow-production.up.railway.app/", screenshots:["images/g02.png"], storyImage:"images/g02.png",
+    video:"", repo:"https://github.com/FTU-Legacy-62/G02", live:"https://pixiuflow-production.up.railway.app/", screenshots:["images/g02.png"], storyImage:"images/g02-story.png",
     team:[{who:"Nguyễn Thanh Ngân",did:"Nghiên cứu dữ liệu, người dùng & logic tài chính"},{who:"Vũ Đức Anh",did:"Nghiên cứu người dùng & logic tài chính"},{who:"Kiều Xuân Thuỷ",did:"UI/UX Designer"},{who:"Nguyễn Bảo Ngọc",did:"UI/UX Designer"},{who:"Đặng Như Ngọc Thạch",did:"Fullstack Developer"}],
   },
   {
@@ -432,7 +432,7 @@ const projects = [
     features:["Mô phỏng 5 năm đầu sự nghiệp, mỗi vòng chơi là một năm","Quyết định công việc, thu nhập và chi tiêu mỗi năm","Hệ thống đầu tư và quản lý thu – chi","Theo dõi cùng lúc tài chính, sức khỏe thể chất và tinh thần"],
     benefits:["Trải nghiệm đánh đổi tài chính – sức khỏe mà không tổn thất thật","Học cách cân bằng thay vì chỉ tối đa hóa tiền bạc"],
     story:"Nhóm nhận ra người trẻ được khuyên 'hãy tiết kiệm, hãy đầu tư' nhưng hiếm khi được thử các đánh đổi đó trước khi gặp ngoài đời. Strive & Thrive mô phỏng 5 năm đầu sự nghiệp, nơi mỗi quyết định về tiền bạc đều tác động tới sức khỏe và tinh thần — để người chơi học cách cân bằng, chứ không chỉ giàu nhưng kiệt sức.",
-    video:"", repo:"https://github.com/FTU-Legacy-62/G03", live:"https://epicdolphindape.github.io/Strive-Thrive-Game-src/", screenshots:["images/g03.png"], storyImage:"images/g03.png",
+    video:"", repo:"https://github.com/FTU-Legacy-62/G03", live:"https://epicdolphindape.github.io/Strive-Thrive-Game-src/", screenshots:["images/g03.png"], storyImage:"images/g03-story.png",
     team:[{who:"Trần Phương Linh",did:"Content, Scenario & Game Feel · QA Lead"},{who:"Nguyễn Khánh Linh",did:"Hệ thống thu nhập & chi tiêu"},{who:"Đỗ Thảo Vy",did:"Hệ thống đầu tư"},{who:"Lê Huyền Vy",did:"Thiết kế UI/UX"},{who:"Trương Thùy Linh",did:"Kiến trúc hệ thống · Core flow · Tích hợp"}],
   },
   {
@@ -443,7 +443,7 @@ const projects = [
     features:["Mô phỏng gọi vốn nhiều người chơi (2–10) có người điều phối","Hệ sinh thái 200 nhà đầu tư AI với 4 tính cách khác nhau","Mỗi phase một sự kiện ngẫu nhiên, chơi bài để xoay xở chỉ số","Bộ bài chiến lược 22 lá và bảng xếp hạng điểm cuối game"],
     benefits:["Luyện chiến lược gọi vốn mà không rủi ro tài chính thật","Thấy ngay tác động của quyết định lên chỉ số và nhà đầu tư"],
     story:"Sinh viên tài chính thường thuộc công thức định giá nhưng thiếu 'bản năng sống còn' khi gọi vốn thật. Nhóm tạo Fun(d) Raising — một sân chơi nhiều người, nơi 200 nhà đầu tư AI phản ứng với từng quyết định, để biến lý thuyết khô khan thành phản xạ chiến lược trong một môi trường không mất tiền thật.",
-    video:"", repo:"https://github.com/FTU-Legacy-62/G04", live:"https://g04-sh5t.onrender.com/", screenshots:["images/g04.png"], storyImage:"images/g04.png",
+    video:"", repo:"https://github.com/FTU-Legacy-62/G04", live:"https://g04-sh5t.onrender.com/", screenshots:["images/g04.png"], storyImage:"images/g04-story.png",
     team:[{who:"Nguyễn Ngọc Minh",did:"Database, hệ thống scenario, card engine, tester"},{who:"Ngô Thị Diễm Phúc",did:"Chỉ số tài chính, cấu trúc input, điều phối luồng game, tester"},{who:"Hà Bảo Khanh",did:"Hệ thống bot nhà đầu tư, quản lý reaction, tester"},{who:"Kim Hye Jin",did:"Trưởng nhóm · Flask backend · API · quản lý phòng · tester"},{who:"Vũ Bạch Dương",did:"Thiết kế UX/UI, frontend, tester"}],
   },
   {
@@ -454,7 +454,7 @@ const projects = [
     features:["Giảng viên tạo phòng, cấp vốn ảo; sinh viên mua bán theo giá thị trường","Đăng nhập JWT, phân quyền, phòng công khai/riêng tư theo mã","Khớp lệnh theo phiên, thanh toán T+2, phí 0.15% và thuế 0.1%","Tự tính NAV, lãi/lỗ, lịch sử giao dịch; bảng xếp hạng cho giảng viên"],
     benefits:["Sinh viên thực hành quản lý danh mục không cần tiền thật","Giảng viên giám sát và chấm điểm minh bạch theo dữ liệu"],
     story:"Môn Quản trị danh mục cần thực hành đầu tư, nhưng giao dịch tiền thật thì rủi ro còn bảng tính thì khó giám sát. Nhóm dựng PortTrack để giảng viên mở phòng, cấp vốn ảo và theo dõi minh bạch, còn sinh viên mua bán theo giá thị trường thật — biến lớp học thành một sàn mô phỏng có kỷ luật.",
-    video:"", repo:"https://github.com/FTU-Legacy-62/G05", live:"https://port-track-xi.vercel.app/", screenshots:["images/g05.png"], storyImage:"images/g05.png",
+    video:"", repo:"https://github.com/FTU-Legacy-62/G05", live:"https://port-track-xi.vercel.app/", screenshots:["images/g05.png"], storyImage:"images/g05-story.png",
     team:[{who:"Nguyen Anh Thu",did:"Trưởng nhóm & điều phối database"},{who:"To Ha Vy",did:"Backend: xác thực, bảo mật, quản lý phòng, dữ liệu thị trường"},{who:"Pham Quoc Thai",did:"Backend: giao dịch, quản lý danh mục, tích hợp giá cổ phiếu"},{who:"Pham Linh Nhan",did:"Frontend: xác thực, dashboard, giám sát, điều hướng"},{who:"Dang Ngoc Linh",did:"Frontend: phòng sinh viên, giao dịch, danh mục, lịch sử"}],
   },
   {
@@ -465,7 +465,7 @@ const projects = [
     features:["Tính cost structure, base price và lợi nhuận hiện tại","Ước tính price elasticity từ dữ liệu giá – cầu trong quá khứ","Monte Carlo mô phỏng lợi nhuận, cầu và rủi ro ở nhiều mức giá","Đề xuất 3 chiến lược giá: Aggressive, Balanced, Conservative"],
     benefits:["Lượng hóa rủi ro – lợi nhuận trước khi tăng giá","So sánh nhiều kịch bản giá trong điều kiện thị trường bất định"],
     story:"Các doanh nghiệp cơ khí nhỏ thường quyết định tăng giá bằng cảm tính và trả giá bằng đơn hàng mất đi. Nhóm xây PricePilot để lượng hóa nỗi lo đó: dùng độ co giãn giá và mô phỏng Monte Carlo, sản phẩm cho thấy mỗi mức tăng giá ảnh hưởng tới lợi nhuận và rủi ro ra sao, kèm ba chiến lược để doanh nghiệp lựa chọn.",
-    video:"", repo:"https://github.com/FTU-Legacy-62/G06", live:"https://pricepiloot.onrender.com/", screenshots:["images/g06.png"], storyImage:"images/g06.png",
+    video:"", repo:"https://github.com/FTU-Legacy-62/G06", live:"https://pricepiloot.onrender.com/", screenshots:["images/g06.png"], storyImage:"images/g06-story.png",
     team:[{who:"Đỗ Thị Quỳnh Anh",did:"Economic Logic & Pricing Model"},{who:"Trần Hà Dương",did:"Data & Input"},{who:"Nguyễn Mai Anh",did:"Monte Carlo Simulation"},{who:"Đàm Ngọc Hà Phương",did:"Advisory Logic & Strategy Engine"},{who:"Nông Đức Minh",did:"Web & Result Display"}],
   },
   {
@@ -476,7 +476,7 @@ const projects = [
     features:["Đầu tư cổ phiếu giả lập STEELSTOX với tài khoản ảo 100.000 USD","8 vòng scenario thị trường, thứ tự ngẫu nhiên mỗi lượt","Quyết định Buy / Sell / Hold kèm câu hỏi xác nhận","Phân tích thiên kiến hành vi và dashboard điểm số cuối game"],
     benefits:["Hiểu đầu tư không chỉ là tính lãi mà còn kiểm soát hành vi","Nhận diện thiên kiến của bản thân qua điểm số và feedback"],
     story:"Nhóm muốn trả lời câu hỏi: vì sao cùng một tin thị trường, mỗi người lại ra quyết định khác nhau? FOMOPOLY cho người chơi đầu tư bằng tài khoản ảo qua 8 vòng, rồi soi lại không chỉ lãi/lỗ mà cả những thiên kiến hành vi đứng sau mỗi lựa chọn — để hiểu đầu tư cũng là chuyện kiểm soát cảm xúc.",
-    video:"", repo:"https://github.com/FTU-Legacy-62/G07", live:"https://g07-fomopoly.streamlit.app/", screenshots:["images/g07.png"], storyImage:"images/g07.png",
+    video:"", repo:"https://github.com/FTU-Legacy-62/G07", live:"https://g07-fomopoly.streamlit.app/", screenshots:["images/g07.png"], storyImage:"images/g07-story.png",
     team:[{who:"Vương Huy Hoàng",did:"Trưởng nhóm · App backbone · quản lý dữ liệu · logic test"},{who:"Đào Minh Quang",did:"Chuẩn bị dữ liệu & thiết kế scenario"},{who:"Nguyễn Hoàng Thiều Trang",did:"Thiết kế luật giao dịch, logic test"},{who:"Trần Trung Hiếu",did:"Luật nhận diện bias & luật chấm điểm"},{who:"Nguyễn Hạnh Trang",did:"Thiết kế UI"}],
   },
   {
@@ -487,7 +487,7 @@ const projects = [
     features:["Mô phỏng khủng hoảng tài chính qua 6 phase diễn biến dần","Nhiều nguồn tin: News, Gmail, Chat, Social và Files","Dùng Research Budget hữu hạn để mở tài liệu chuyên sâu","Result page và reveal case page tiết lộ khủng hoảng thật phía sau"],
     benefits:["Cảm nhận áp lực ra quyết định khi thông tin còn nhiễu","Học quản trị rủi ro qua trải nghiệm thay vì chỉ đọc lại sự kiện"],
     story:"Khủng hoảng tài chính thường được học theo kiểu đọc lại khi mọi chuyện đã rõ. Nhóm làm FREE FALL để đặt người chơi vào chính khoảnh khắc bất định đó — lọc tin thật giữa tin nhiễu, phân bổ ngân sách nghiên cứu hữu hạn và ra quyết định danh mục, trước khi case thật được hé lộ ở cuối.",
-    video:"", repo:"https://github.com/FTU-Legacy-62/G08", live:"https://financialcrisisftu.netlify.app/", screenshots:["images/g08.png"], storyImage:"images/g08.png",
+    video:"", repo:"https://github.com/FTU-Legacy-62/G08", live:"https://financialcrisisftu.netlify.app/", screenshots:["images/g08.png"], storyImage:"images/g08-story.png",
     team:[{who:"Lê Khánh Linh",did:"Project Lead · UX/UI & tích hợp sản phẩm"},{who:"Nguyễn Châu Anh",did:"Gameplay flow & trải nghiệm người chơi"},{who:"Vũ Lam Duy",did:"Dữ liệu scenario & nội dung case"},{who:"Hoàng Bảo Như",did:"Logic quyết định & hệ thống chấm điểm"},{who:"Nguyễn Quang Kiệt",did:"Lập trình, tích hợp & kiểm thử"}],
   },
   {
@@ -498,7 +498,7 @@ const projects = [
     features:["Nhập danh mục (mã, số lượng, benchmark, thời gian), tự tính tỷ trọng","Dashboard CAGR, Volatility, Sharpe, Sortino, Max Drawdown, VaR/CVaR, Beta, Alpha…","So sánh benchmark, bảng tài sản và ma trận tương quan","Mô phỏng thêm mã và tối ưu tỷ trọng (max Sharpe / min Volatility)"],
     benefits:["Đánh giá chất lượng cả danh mục, không chỉ từng mã","Tự động hóa các phép tính rủi ro – lợi nhuận phức tạp"],
     story:"Nhà đầu tư cá nhân hay nhìn từng mã tăng giảm mà bỏ quên chất lượng của cả danh mục. Nhóm xây FinFolio để gom mọi phép tính rủi ro – lợi nhuận phức tạp (Sharpe, Drawdown, tương quan, so benchmark) vào một dashboard, và còn cho thử 'what-if' khi thêm một mã mới trước khi xuống tiền thật.",
-    video:"", repo:"https://github.com/FTU-Legacy-62/G09", live:"https://finfolio-axub.onrender.com/", screenshots:["images/g09.png"], storyImage:"images/g09.png",
+    video:"", repo:"https://github.com/FTU-Legacy-62/G09", live:"https://finfolio-axub.onrender.com/", screenshots:["images/g09.png"], storyImage:"images/g09-story.png",
     team:[{who:"Phạm Minh Phương",did:"Lập kế hoạch sản phẩm & thiết kế luồng nhập dữ liệu"},{who:"Hoàng Minh Ngọc",did:"Logic tài chính & tính toán backend"},{who:"Nguyễn Trịnh Thái Hưng",did:"Thiết kế UI/UX & trực quan hóa dashboard"},{who:"Nghiêm An Thái",did:"Xây dựng các trang chính phía frontend"},{who:"Bùi Thanh Hải",did:"Tích hợp backend/frontend, biểu đồ, mô phỏng"}],
   },
   {
@@ -509,7 +509,7 @@ const projects = [
     features:["Đánh giá rủi ro nhanh & sâu với 8 chỉ số và radar 7 chiều","So sánh gói vay ngân hàng theo 8 tiêu chí kèm chấm điểm","Phân tích đầu tư NPV/IRR cùng sensitivity và kịch bản","DuPont, dashboard trực quan, cố vấn AI và xuất báo cáo PDF"],
     benefits:["Tự đánh giá sức khỏe tài chính trước khi vay","So sánh gói vay và phân tích đầu tư trên cùng một nền tảng"],
     story:"Hơn 90% doanh nghiệp Việt Nam là SME, nhưng họ khó tự đánh giá sức khỏe tài chính và so sánh các gói vay rải rác. Nhóm xây Financial Analyzer để tính các chỉ số, chấm điểm rủi ro, xếp hạng khoản vay theo 8 tiêu chí và thêm cố vấn AI — giúp chủ doanh nghiệp vay vốn bằng dữ liệu thay vì phỏng đoán.",
-    video:"", repo:"https://github.com/FTU-Legacy-62/G10", live:"https://g10-bjcd.onrender.com", screenshots:["images/g10.png"], storyImage:"images/g10.png",
+    video:"", repo:"https://github.com/FTU-Legacy-62/G10", live:"https://g10-bjcd.onrender.com", screenshots:["images/g10.png"], storyImage:"images/g10-story.png",
     team:[{who:"Đạt",did:"Backend API, database, deploy, risk scoring, DeepSeek AI"},{who:"Huy",did:"BaseScraper engine, BIDV scraper, database"},{who:"Tuấn",did:"UI/UX, financial engine, dashboard, AI consultant"},{who:"Phước",did:"Web scraper VPBank + Vietcombank"},{who:"Quang",did:"Web scraper MBBank + Techcombank, tích hợp scraper"}],
   },
 ];
