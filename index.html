@@ -81,6 +81,9 @@
     display:block;
     border-radius:24px;
   }
+    .legacy-hidden{
+    display:none !important;
+  }
   .product-shelf{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px 10px;position:relative}
   .shelf-item{min-width:0;position:relative;background:var(--surface);border:1px solid var(--line);border-radius:9px 9px 5px 5px;overflow:hidden;box-shadow:0 7px 14px rgba(8,61,49,.09)}
   .shelf-item::after{content:"";position:absolute;left:-7px;right:-7px;bottom:-9px;height:7px;background:#D2E2DA;border-radius:2px;box-shadow:0 3px 5px rgba(8,61,49,.13)}
@@ -345,8 +348,8 @@
           src="images/showcase.png"
           alt="Kệ trưng bày 10 sản phẩm ứng dụng tài chính của sinh viên K62"
         >
-        <div class="product-shelf" id="heroShelf" hidden></div>
       </div>
+      <div class="product-shelf legacy-hidden" id="heroShelf"></div>
     </div>
   </div>
 </section>
