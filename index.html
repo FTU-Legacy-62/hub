@@ -85,27 +85,28 @@
   @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:600px){.grid{grid-template-columns:1fr}}
 
-  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;cursor:pointer;display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .22s ease,box-shadow .22s ease,border-color .22s;position:relative}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .22s ease,box-shadow .22s ease,border-color .22s;position:relative;min-height:100%}
   .card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s ease;z-index:2}
   .card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:transparent}
   .card:hover::before{transform:scaleX(1)}
   .card:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-  .thumb{aspect-ratio:16/10;background:var(--ink-soft);position:relative;overflow:hidden}
-  .thumb img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+  .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,var(--ink-soft),var(--ink));position:relative;overflow:hidden}
+  .thumb img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+  .thumb::after{content:"";position:absolute;left:0;right:0;bottom:0;height:42%;background:linear-gradient(180deg,rgba(8,61,49,0),rgba(8,61,49,.34));pointer-events:none}
   .thumb-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,var(--ink-soft),var(--ink))}
   .thumb-ph .init{font-family:var(--font-display);font-weight:700;font-size:42px;color:var(--accent)}
   .thumb-ph .tag{font-family:var(--font-mono);font-size:11px;color:#89AA9D;letter-spacing:.1em}
-  .gcode{position:absolute;top:10px;left:10px;z-index:2;font-family:var(--font-mono);font-size:11px;background:rgba(8,61,49,.78);color:#fff;padding:4px 9px;border-radius:6px;letter-spacing:.06em}
-  .live-badge{position:absolute;top:10px;right:10px;z-index:2;font-family:var(--font-mono);font-size:10px;background:rgba(252,253,252,.92);color:var(--accent-deep);border:1px solid rgba(220,232,226,.9);padding:4px 8px;border-radius:999px;letter-spacing:.04em}
-  .card-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:9px;flex:1}
+  .gcode{position:absolute;top:12px;left:12px;z-index:3;font-family:var(--font-mono);font-size:10.5px;background:rgba(8,61,49,.82);color:#fff;padding:4px 9px;border-radius:999px;letter-spacing:.06em}
+  .live-badge{position:absolute;top:12px;right:12px;z-index:3;font-family:var(--font-mono);font-size:10px;background:rgba(252,253,252,.94);color:var(--accent-deep);border:1px solid rgba(220,232,226,.9);padding:4px 8px;border-radius:999px;letter-spacing:.04em}
+  .card-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
   .card-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;font-family:var(--font-mono);font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.045em}
   .card-meta strong{color:var(--accent-deep);font-weight:600}
-  .card-name{font-family:var(--font-display);font-weight:600;font-size:19px;letter-spacing:-.01em}
-  .card-tag{color:var(--muted);font-size:14px;flex:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-  .card-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px}
+  .card-name{font-family:var(--font-display);font-weight:600;font-size:20px;line-height:1.18;letter-spacing:-.01em}
+  .card-tag{color:var(--muted);font-size:14px;line-height:1.55;min-height:65px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .card-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;min-height:28px}
   .mini{font-family:var(--font-mono);font-size:10.5px;padding:4px 9px;border-radius:6px;background:var(--bg);color:var(--muted);border:1px solid var(--line)}
-  .card-actions{display:flex;gap:8px;margin-top:9px}
-  .card-action{border:1px solid var(--line-dark);border-radius:8px;padding:8px 11px;font-family:var(--font-mono);font-size:11.5px;font-weight:500;line-height:1.15;display:inline-flex;align-items:center;justify-content:center;gap:6px;transition:.2s;cursor:pointer}
+  .card-actions{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:4px}
+  .card-action{border:1px solid var(--line-dark);border-radius:10px;padding:9px 12px;font-family:var(--font-mono);font-size:11.5px;font-weight:500;line-height:1.15;display:inline-flex;align-items:center;justify-content:center;gap:6px;transition:.2s;cursor:pointer}
   .card-action.primary{background:var(--ink);border-color:var(--ink);color:#fff;flex:1}
   .card-action.primary:hover{background:var(--accent-deep);border-color:var(--accent-deep)}
   .card-action.ghost{background:transparent;color:var(--ink)}
@@ -113,19 +114,18 @@
 
   .overlay{position:fixed;inset:0;z-index:60;background:rgba(8,61,49,.58);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
   .overlay.open{display:flex}
-  .modal{background:var(--surface);border-radius:20px;max-width:940px;width:100%;overflow:hidden;box-shadow:var(--shadow-lg);animation:rise .28s cubic-bezier(.2,.7,.3,1);position:relative}
+  .modal{background:var(--surface);border-radius:20px;max-width:980px;width:100%;overflow:hidden;box-shadow:var(--shadow-lg);animation:rise .28s cubic-bezier(.2,.7,.3,1);position:relative}
   @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-  .modal-top{display:grid;grid-template-columns:1.05fr 1fr}
-  @media(max-width:760px){.modal-top{grid-template-columns:1fr}}
-  .media{background:var(--ink-soft);position:relative;min-height:300px}
+  .modal-top{display:block}
+  .media{background:#EEF6F2;position:relative;aspect-ratio:16/9;min-height:0;overflow:hidden;border-bottom:1px solid var(--line)}
   .media iframe{width:100%;height:100%;border:0;display:block;position:absolute;inset:0;background:#fff}
   .media .frame-wrap{position:absolute;inset:0}
-  .media img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+  .media img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
   .media .shot-ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:12px;color:#89AA9D;background:linear-gradient(135deg,var(--ink-soft),var(--ink))}
   .media-label{position:absolute;top:12px;left:12px;z-index:3;font-family:var(--font-mono);font-size:10px;background:rgba(8,61,49,.78);color:#fff;padding:5px 9px;border-radius:6px;letter-spacing:.06em}
   .media-open{position:absolute;bottom:12px;right:12px;z-index:3;font-family:var(--font-mono);font-size:12px;background:var(--accent);color:#052B22;font-weight:600;padding:8px 12px;border-radius:8px;transition:.2s}
   .media-open:hover{background:#fff}
-  .modal-info{padding:30px 32px}
+  .modal-info{padding:30px 32px;display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:34px;align-items:start}
   .modal-info .grp{font-family:var(--font-mono);font-size:12px;color:var(--accent-deep);text-transform:uppercase;letter-spacing:.05em}
   .modal-info h3{font-family:var(--font-display);font-weight:700;font-size:28px;letter-spacing:-.02em;margin-top:6px}
   .modal-info .tagline{color:var(--muted);margin-top:8px;font-size:15px}
@@ -133,6 +133,7 @@
   .meta-pill{font-family:var(--font-mono);font-size:10.5px;color:var(--accent-deep);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:5px 9px}
   .modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
   .modal-actions .btn{min-height:42px}
+  .modal-details .block:first-child{margin-top:0}
   .block{margin-top:22px}
   .block h4{font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink);margin-bottom:10px;display:flex;align-items:center;gap:8px}
   .block h4 .en{color:var(--accent-deep)}
@@ -235,13 +236,14 @@
     .catalog-current{margin-top:4px}
     .grid{gap:18px}
     .card-body{padding:17px 18px 19px}
-    .card-actions{gap:7px}
+    .card-tag{min-height:auto}
+    .card-actions{grid-template-columns:1fr 1fr;gap:7px}
     .card-action{padding:9px 10px;font-size:11px}
 
     .overlay{padding:0;align-items:stretch}
     .modal{min-height:100%;border-radius:0}
-    .media{min-height:230px}
-    .modal-info{padding:26px 20px 28px}
+    .media{min-height:0}
+    .modal-info{grid-template-columns:1fr;gap:24px;padding:26px 20px 28px}
     .modal-info h3{font-size:26px}
     .modal-actions .btn{justify-content:center;flex:1}
     .modal-foot{padding:24px 20px 28px}
@@ -350,14 +352,18 @@
     <div class="modal-top">
       <div class="media" id="mMedia"></div>
       <div class="modal-info">
-        <div class="grp" id="mGroup"></div>
-        <h3 id="mTitle"></h3>
-        <p class="tagline" id="mTagline"></p>
-        <div class="modal-meta" id="mMeta"></div>
-        <div class="modal-actions" id="mQuickLinks"></div>
-        <div class="block"><h4>Đối tượng người dùng</h4><p id="mUser"></p></div>
-        <div class="block"><h4>Tính năng chính</h4><ul id="mFeatures"></ul></div>
-        <div class="block"><h4>Lợi ích</h4><ul id="mBenefits"></ul></div>
+        <div class="modal-summary">
+          <div class="grp" id="mGroup"></div>
+          <h3 id="mTitle"></h3>
+          <p class="tagline" id="mTagline"></p>
+          <div class="modal-meta" id="mMeta"></div>
+          <div class="modal-actions" id="mQuickLinks"></div>
+        </div>
+        <div class="modal-details">
+          <div class="block"><h4>Đối tượng người dùng</h4><p id="mUser"></p></div>
+          <div class="block"><h4>Tính năng chính</h4><ul id="mFeatures"></ul></div>
+          <div class="block"><h4>Lợi ích</h4><ul id="mBenefits"></ul></div>
+        </div>
       </div>
     </div>
     <div class="modal-foot">
@@ -404,7 +410,7 @@ const projects = [
     features:["Trắc nghiệm MBTI 20 câu theo bối cảnh tài chính – kế toán","Bản đồ logic gắn 16 nhóm tính cách với nghề tài chính cụ thể","Lộ trình 4 năm kèm liên kết chứng chỉ ACCA, CFA, CMA","Hồ sơ nghề nghiệp chi tiết dạng accordion mở/đóng"],
     benefits:["Giúp sinh viên mới định hướng ngành tài chính rõ ràng hơn","Kết nối tính cách với lộ trình nghề và chứng chỉ phù hợp"],
     story:"Nhóm bắt đầu từ một quan sát quen thuộc: sinh viên năm nhất ngành Tài chính thường mơ hồ không biết mình hợp với nghề nào. Từ đó, FinGuide ra đời — biến bài trắc nghiệm MBTI thành một tấm bản đồ nghề nghiệp, nối tính cách của mỗi người với lộ trình học và chứng chỉ phù hợp, giúp các 'freshers' tự tin chọn hướng đi ngay từ những bước đầu.",
-    video:"", repo:"https://github.com/FTU-Legacy-62/G01", live:"https://ftu-legacy-62.github.io/G01/", screenshots:[],
+    video:"", repo:"https://github.com/FTU-Legacy-62/G01", live:"https://ftu-legacy-62.github.io/G01/", screenshots:["images/g01.png"], storyImage:"images/g01.png",
     team:[{who:"Trịnh Minh Đức",did:"Lập trình viên & Trưởng nhóm"},{who:"Nguyễn Hoàng Thu Thảo",did:"Nghiên cứu nghề nghiệp & đánh giá định tính"},{who:"Nguyễn Anh Khoa",did:"Logic MBTI & hệ thống gợi ý"},{who:"Lê Minh Đăng",did:"Logic MBTI & hệ thống gợi ý"}],
   },
   {
@@ -415,7 +421,7 @@ const projects = [
     features:["Ghi nhận doanh thu, nhập hàng và chi phí (một hoặc nhiều giao dịch)","Quản lý sản phẩm, danh mục và cảnh báo sắp hết tồn kho","Theo dõi công nợ: đã/chưa thanh toán, ngày đến hạn","Dashboard & báo cáo doanh thu – chi phí – lợi nhuận – dòng tiền"],
     benefits:["Biết chính xác đang lời hay lỗ và lỗ ở đâu","Ra quyết định kinh doanh dựa trên số liệu thay vì cảm tính"],
     story:"Xuất phát từ thực tế nhiều chủ shop nhỏ tin mình đang lời nhưng thực ra đang lỗ mà không biết lỗ ở đâu, nhóm xây Pixiu Flow để gói toàn bộ thu – chi – tồn kho – công nợ vào một hệ thống thống nhất. Mục tiêu là người không rành tài chính vẫn nhìn ra bức tranh kinh doanh thật của mình và quyết định dựa trên số liệu.",
-    video:"", repo:"https://github.com/FTU-Legacy-62/G02", live:"https://pixiuflow-production.up.railway.app/", screenshots:[],
+    video:"", repo:"https://github.com/FTU-Legacy-62/G02", live:"https://pixiuflow-production.up.railway.app/", screenshots:["images/g02.png"], storyImage:"images/g02.png",
     team:[{who:"Nguyễn Thanh Ngân",did:"Nghiên cứu dữ liệu, người dùng & logic tài chính"},{who:"Vũ Đức Anh",did:"Nghiên cứu người dùng & logic tài chính"},{who:"Kiều Xuân Thuỷ",did:"UI/UX Designer"},{who:"Nguyễn Bảo Ngọc",did:"UI/UX Designer"},{who:"Đặng Như Ngọc Thạch",did:"Fullstack Developer"}],
   },
   {
@@ -426,7 +432,7 @@ const projects = [
     features:["Mô phỏng 5 năm đầu sự nghiệp, mỗi vòng chơi là một năm","Quyết định công việc, thu nhập và chi tiêu mỗi năm","Hệ thống đầu tư và quản lý thu – chi","Theo dõi cùng lúc tài chính, sức khỏe thể chất và tinh thần"],
     benefits:["Trải nghiệm đánh đổi tài chính – sức khỏe mà không tổn thất thật","Học cách cân bằng thay vì chỉ tối đa hóa tiền bạc"],
     story:"Nhóm nhận ra người trẻ được khuyên 'hãy tiết kiệm, hãy đầu tư' nhưng hiếm khi được thử các đánh đổi đó trước khi gặp ngoài đời. Strive & Thrive mô phỏng 5 năm đầu sự nghiệp, nơi mỗi quyết định về tiền bạc đều tác động tới sức khỏe và tinh thần — để người chơi học cách cân bằng, chứ không chỉ giàu nhưng kiệt sức.",
-    video:"", repo:"https://github.com/FTU-Legacy-62/G03", live:"https://epicdolphindape.github.io/Strive-Thrive-Game-src/", screenshots:[],
+    video:"", repo:"https://github.com/FTU-Legacy-62/G03", live:"https://epicdolphindape.github.io/Strive-Thrive-Game-src/", screenshots:["images/g03.png"], storyImage:"images/g03.png",
     team:[{who:"Trần Phương Linh",did:"Content, Scenario & Game Feel · QA Lead"},{who:"Nguyễn Khánh Linh",did:"Hệ thống thu nhập & chi tiêu"},{who:"Đỗ Thảo Vy",did:"Hệ thống đầu tư"},{who:"Lê Huyền Vy",did:"Thiết kế UI/UX"},{who:"Trương Thùy Linh",did:"Kiến trúc hệ thống · Core flow · Tích hợp"}],
   },
   {
@@ -448,7 +454,7 @@ const projects = [
     features:["Giảng viên tạo phòng, cấp vốn ảo; sinh viên mua bán theo giá thị trường","Đăng nhập JWT, phân quyền, phòng công khai/riêng tư theo mã","Khớp lệnh theo phiên, thanh toán T+2, phí 0.15% và thuế 0.1%","Tự tính NAV, lãi/lỗ, lịch sử giao dịch; bảng xếp hạng cho giảng viên"],
     benefits:["Sinh viên thực hành quản lý danh mục không cần tiền thật","Giảng viên giám sát và chấm điểm minh bạch theo dữ liệu"],
     story:"Môn Quản trị danh mục cần thực hành đầu tư, nhưng giao dịch tiền thật thì rủi ro còn bảng tính thì khó giám sát. Nhóm dựng PortTrack để giảng viên mở phòng, cấp vốn ảo và theo dõi minh bạch, còn sinh viên mua bán theo giá thị trường thật — biến lớp học thành một sàn mô phỏng có kỷ luật.",
-    video:"", repo:"https://github.com/FTU-Legacy-62/G05", live:"https://port-track-xi.vercel.app/", screenshots:[],
+    video:"", repo:"https://github.com/FTU-Legacy-62/G05", live:"https://port-track-xi.vercel.app/", screenshots:["images/g05.png"], storyImage:"images/g05.png",
     team:[{who:"Nguyen Anh Thu",did:"Trưởng nhóm & điều phối database"},{who:"To Ha Vy",did:"Backend: xác thực, bảo mật, quản lý phòng, dữ liệu thị trường"},{who:"Pham Quoc Thai",did:"Backend: giao dịch, quản lý danh mục, tích hợp giá cổ phiếu"},{who:"Pham Linh Nhan",did:"Frontend: xác thực, dashboard, giám sát, điều hướng"},{who:"Dang Ngoc Linh",did:"Frontend: phòng sinh viên, giao dịch, danh mục, lịch sử"}],
   },
   {
@@ -481,7 +487,7 @@ const projects = [
     features:["Mô phỏng khủng hoảng tài chính qua 6 phase diễn biến dần","Nhiều nguồn tin: News, Gmail, Chat, Social và Files","Dùng Research Budget hữu hạn để mở tài liệu chuyên sâu","Result page và reveal case page tiết lộ khủng hoảng thật phía sau"],
     benefits:["Cảm nhận áp lực ra quyết định khi thông tin còn nhiễu","Học quản trị rủi ro qua trải nghiệm thay vì chỉ đọc lại sự kiện"],
     story:"Khủng hoảng tài chính thường được học theo kiểu đọc lại khi mọi chuyện đã rõ. Nhóm làm FREE FALL để đặt người chơi vào chính khoảnh khắc bất định đó — lọc tin thật giữa tin nhiễu, phân bổ ngân sách nghiên cứu hữu hạn và ra quyết định danh mục, trước khi case thật được hé lộ ở cuối.",
-    video:"", repo:"https://github.com/FTU-Legacy-62/G08", live:"https://financialcrisisftu.netlify.app/", screenshots:[],
+    video:"", repo:"https://github.com/FTU-Legacy-62/G08", live:"https://financialcrisisftu.netlify.app/", screenshots:["images/g08.png"], storyImage:"images/g08.png",
     team:[{who:"Lê Khánh Linh",did:"Project Lead · UX/UI & tích hợp sản phẩm"},{who:"Nguyễn Châu Anh",did:"Gameplay flow & trải nghiệm người chơi"},{who:"Vũ Lam Duy",did:"Dữ liệu scenario & nội dung case"},{who:"Hoàng Bảo Như",did:"Logic quyết định & hệ thống chấm điểm"},{who:"Nguyễn Quang Kiệt",did:"Lập trình, tích hợp & kiểm thử"}],
   },
   {
@@ -523,7 +529,7 @@ document.getElementById('stats').innerHTML=stat.map(s=>`<div class="stat"><div c
 
 const esc=s=>(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const initial=n=>(n||'?').trim().split(/\s+/).pop().charAt(0).toUpperCase();
-const shot=u=>u?'https://s.wordpress.com/mshots/v1/'+encodeURIComponent(u)+'?w=1280&h=800':'';
+const shot=u=>u?'https://s.wordpress.com/mshots/v1/'+encodeURIComponent(u)+'?w=1280&h=720':'';
 const snapSrc=p=>(p.screenshots&&p.screenshots[0])?p.screenshots[0]:shot(p.live);
 document.getElementById('heroShelf').innerHTML=projects.map(p=>{
   const s=snapSrc(p);
@@ -557,8 +563,8 @@ function renderGrid(){
       `<button class="card-action ghost" type="button" data-open="${i}">Chi tiết</button>`
     ].join('');return `
     <article class="card" tabindex="0" role="button" data-i="${i}" aria-label="Xem chi tiết ${esc(p.name)}">
-      <div class="thumb"><span class="gcode">${esc(p.group)}</span>${p.live?'<span class="live-badge">Demo online</span>':''}${thumbHTML(p)}</div>
-      <div class="card-body"><div class="card-meta"><strong>${esc(p.group)}</strong><span>${(p.team||[]).length} thành viên</span></div><h3 class="card-name">${esc(p.name)}</h3><p class="card-tag">${esc(p.tagline)}</p>
+      <div class="thumb"><span class="gcode">${esc(p.group)}</span>${p.live?'<span class="live-badge">Online</span>':''}${thumbHTML(p)}</div>
+      <div class="card-body"><div class="card-meta"><strong>${(p.team||[]).length} thành viên</strong><span>${p.live?'Online':'Snapshot'}</span></div><h3 class="card-name">${esc(p.name)}</h3><p class="card-tag">${esc(p.tagline)}</p>
         <div class="card-chips">${(p.tags||[]).map(t=>`<span class="mini">${esc(t)}</span>`).join('')}</div>
         <div class="card-actions">${actions}</div></div>
     </article>`;}).join('');
