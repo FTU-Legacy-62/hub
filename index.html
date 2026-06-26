@@ -28,7 +28,7 @@
   header{position:sticky;top:0;z-index:40;background:rgba(241,247,244,.86);backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
   .brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:16px;letter-spacing:-.01em}
-  .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(47,158,117,.18)}
+  .brand-icon{width:22px;height:22px;border-radius:50%;display:block;box-shadow:0 0 0 4px rgba(47,158,117,.14)}
   .nav-links{display:flex;gap:28px;align-items:center}
   .nav-links a{font-size:14px;color:var(--muted);font-weight:500;transition:color .2s}
   .nav-links a:hover{color:var(--ink)}
@@ -295,7 +295,7 @@
 
 <header>
   <div class="wrap nav">
-    <div class="brand"><span class="dot"></span><span id="brandName"></span></div>
+    <div class="brand"><img class="brand-icon" src="images/favicon.png" alt=""><span id="brandName"></span></div>
     <nav class="nav-links">
       <a href="#projects">Sản phẩm</a>
       <a href="#about">Giới thiệu</a>
@@ -417,7 +417,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="brand"><span class="dot"></span><span id="footBrand"></span></div>
+        <div class="brand"><img class="brand-icon" src="images/favicon.png" alt=""><span id="footBrand"></span></div>
         <p class="f-note">Nơi lưu giữ các sản phẩm học phần của sinh viên Chương trình Tiên tiến Tài chính – Ngân hàng K62, FTU.</p>
       </div>
       <div class="f-meta">Thiết kế &amp; tổng hợp bởi <strong style="color:#fff">Thiện Quang</strong><br>
@@ -432,7 +432,7 @@
 /* =================================================================
    ▼▼▼  CHỈ CẦN SỬA PHẦN NÀY  ▼▼▼
    ================================================================= */
-const CLASS_INFO = { className:"FTU Legacy", orgUrl:"https://github.com/FTU-Legacy-62" };
+const CLASS_INFO = { className:"Products showcase", orgUrl:"https://github.com/FTU-Legacy-62" };
 
 const projects = [
   {
